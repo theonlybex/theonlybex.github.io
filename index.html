@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bekzhan (Bex) Abdimanapov - Resume</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+      color: #333;
+      scroll-behavior: smooth;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 80px auto;
+      background: #fff;
+      padding: 20px 40px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    header h1 {
+      margin-bottom: 5px;
+    }
+
+    .contact a {
+      color: #0066cc;
+      text-decoration: none;
+      margin-right: 10px;
+    }
+
+    /* Navigation Styles */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav li {
+      margin-right: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #0066cc;
+    }
+
+    /* Section Styles */
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .section h2 {
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 5px;
+      margin-bottom: 15px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px;
+      }
+
+      nav ul {
+        flex-direction: column;
+      }
+
+      nav li {
+        margin-bottom: 10px;
+      }
+    }
+
+    /* Dark Mode Styles */
+    body.dark-mode {
+      background-color: #333;
+      color: #f4f4f4;
+    }
+
+    body.dark-mode .container {
+      background: #444;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    body.dark-mode nav {
+      background: #444;
+    }
+
+    body.dark-mode nav a {
+      color: #f4f4f4;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="nav-left">
+      <strong>Bex's Resume</strong>
+    </div>
+    <ul>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#leadership">Leadership</a></li>
+      <li><a href="#skills">Skills</a></li>
+    </ul>
+    <button id="toggleDarkMode">Toggle Dark Mode</button>
+  </nav>
+
+  <!-- Resume Content -->
+  <div class="container">
+    <header>
+      <h1>Bekzhan (Bex) Abdimanapov</h1>
+      <p class="contact">
+        <a href="mailto:gg.bex.abdi@gmail.com">gg.bex.abdi@gmail.com</a> | (209)-905-8695<br>
+        <a href="https://www.linkedin.com/in/bekzhan-bex" target="_blank">LinkedIn: bekzhan-bex</a> |
+        <a href="https://github.com/theonlybex" target="_blank">GitHub: theonlybex</a>
+      </p>
+    </header>
+
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <ul>
+        <li>
+          <strong>FetchAI – Project Creator (Dec 2024 – Present)</strong>
+          <p>Crafted an application enabling any AI assistant to control operating systems for task automation.</p>
+        </li>
+        <li>
+          <strong>Project Noisrucer – Team Member (Jun 2024 – Present)</strong>
+          <p>Improved backend logic and contributed frontend design solutions for a large team project.</p>
+        </li>
+        <li>
+          <strong>Fresh Eyes – Project Lead (Oct 2024)</strong>
+          <p>Led development of a project that identifies product spoilage from a single picture.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="experience" class="section">
+      <h2>Experience</h2>
+      <ul>
+        <li>
+          <strong>Halyk Bank – Software Developer (Sep 2023 – Jan 2024)</strong>
+          <p>Developed SQL scripts to optimize client data storage, resolved web development issues, and assisted in
+            automating bank tasks.</p>
+        </li>
+        <li>
+          <strong>Centras Capital – Software Engineer (Sep 2022 – May 2023)</strong>
+          <p>Redesigned company systems for better organization and contributed to website development for improved
+            sales and client management.</p>
+        </li>
+        <li>
+          <strong>Apex Interactive – Software Engineering Intern (Jun 2022 – Aug 2022)</strong>
+          <p>Developed an online web assistant to automate client support services for high-profile clients.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="education" class="section">
+      <h2>Education</h2>
+      <ul>
+        <li>
+          <strong>University of the Pacific, California, Stockton</strong>
+          <p>B.S. &amp; M.S. in Computer Science (Expected Graduation: May 2025)<br>
+            Concentrations: Software Development and AI Developer<br>
+            Relevant Coursework: Advanced Software Engineering, Application Development, Data Structures &amp;
+            Algorithms, Machine Learning, and more.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="leadership" class="section">
+      <h2>Leadership</h2>
+      <ul>
+        <li>
+          <strong>Google Developers Club – Member (Jan 2024 – Current)</strong>
+          <p>Represented UOP at the CalHacks Hackathon and developed a mobile app, receiving positive reviews.</p>
+        </li>
+        <li>
+          <strong>Research Group – Member (Sep 2024 – Current)</strong>
+          <p>Assisted in hosting game presentation demos for university students.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="skills" class="section">
+      <h2>Skills</h2>
+      <p>Python3, Java, JavaScript, HTML/CSS, SQL, MATLAB, C++, C, Flutter</p>
+    </section>
+  </div>
+
+  <!-- JavaScript for Interactivity -->
+  <script>
+    // Toggle dark mode on button click
+    document.getElementById('toggleDarkMode').addEventListener('click', function () {
+      document.body.classList.toggle('dark-mode');
+    });
+  </script>
+</body>
+
+</html>
