@@ -1,219 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bex Resume - Bekzhan (Bex) Abdimanapov</title>
-  <style>
-    /* Global Styles */
-    html {
-      scroll-behavior: smooth;
-    }
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      color: #333;
-      background-color: #fff;
-      line-height: 1.6;
-    }
-    a {
-      color: #333;
-      text-decoration: none;
-    }
-    /* Header & Navigation */
-    header {
-      background-color: #f2f2f2;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 100;
-      border-bottom: 1px solid #ddd;
-    }
-    nav {
-      display: flex;
-      justify-content: center;
-      padding: 15px 0;
-      gap: 20px;
-    }
-    nav a {
-      padding: 10px 15px;
-      font-weight: bold;
-      border-radius: 4px;
-      transition: background-color 0.3s;
-    }
-    nav a:hover {
-      background-color: #ddd;
-    }
-    /* Section Container */
-    section {
-      padding: 100px 20px 50px;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    .container {
-      margin-bottom: 50px;
-    }
-    h2 {
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 10px;
-      margin-bottom: 20px;
-      color: #444;
-    }
-    /* Card Style for Each Section Item */
-    .card {
-      background-color: #f9f9f9;
-      padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 5px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    }
-    /* Button Style */
-    button {
-      background-color: #333;
-      color: #fff;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-    button:hover {
-      background-color: #555;
-    }
-    /* Footer */
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #f2f2f2;
-      border-top: 1px solid #ddd;
-      margin-top: 40px;
-      font-size: 0.9rem;
-      color: #777;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bex Abdimanapov | Software Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
 </head>
+
 <body>
-  <!-- Fixed Navigation Header -->
-  <header>
+
     <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#experience">Experience</a>
-      <a href="#education">Education</a>
-      <a href="#activities">Activities</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
+        <ul>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
     </nav>
-  </header>
 
-  <!-- About Section -->
-  <section id="about" class="container">
-    <h2>About Me</h2>
-    <div class="card">
-      <h3>Bekzhan (Bex) Abdimanapov</h3>
-      <p>Email: <a href="mailto:gg.bex.abdi@gmail.com">gg.bex.abdi@gmail.com</a></p>
-      <p>Phone: (209)-905-8695</p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/bekzhan-bex" target="_blank">bekzhan-bex</a></p>
-      <p>GitHub: <a href="https://github.com/theonlybex" target="_blank">theonlybex</a></p>
-    </div>
-  </section>
+    <header>
+        <h1>Bex Abdimanapov</h1>
+        <p>Software Developer</p>
+        <div id="storyText"></div> <!-- The story will be typed here -->
+    </header>
 
-  <!-- Projects Section -->
-  <section id="projects" class="container">
-    <h2>Projects</h2>
-    <div class="card">
-      <h3>FetchAI</h3>
-      <p><strong>Role:</strong> Project Creator (Dec 2024 – Present)</p>
-      <p><strong>Location:</strong> California, GitHub</p>
-      <p>Crafted an application to let any AI assistant control the operating system to automate tasks and help with assigned tasks. Made the program easy to use and functional on any OS.</p>
-    </div>
-    <div class="card">
-      <h3>Project Noisrucer</h3>
-      <p><strong>Role:</strong> Team Member (Jun 2024 – Present)</p>
-      <p><strong>Location:</strong> California, Stockton</p>
-      <p>Improved and maintained backend logic for a project with nearly 100 contributors. Contributed design solutions on the frontend to help move the project closer to final release.</p>
-    </div>
-    <div class="card">
-      <h3>Fresh Eyes</h3>
-      <p><strong>Role:</strong> Project Lead (Oct 2024)</p>
-      <p><strong>Location:</strong> California, San Francisco</p>
-      <p>Led the development of a project that identifies the spoilage level of any product from a single picture.</p>
-    </div>
-  </section>
+    <main>
+        <section id="projects">
+            <h2>Projects</h2>
+            <!-- myEvee Project -->
+            <div class="project">
+                <div class="project-content">
+                    <div class="project-info">
+                        <h3>myEvee</h3>
+                        <p>A comprehensive event management platform that helps users discover, create, and manage events in their area.</p>
+                        <div class="project-details">
+                            <ul>
+                                <li>Built with React and Node.js</li>
+                                <li>Real-time event updates and notifications</li>
+                                <li>Interactive calendar and map integration</li>
+                                <li>User authentication and profile management</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="project-analysis">
+                        <div class="analysis-box">
+                            <h4>Biggest Problem</h4>
+                            <p>Coordinating multiple events and managing user interactions in real-time while maintaining system performance.</p>
+                        </div>
+                        <div class="analysis-box">
+                            <h4>Method</h4>
+                            <p>Implemented WebSocket connections for real-time updates and used Redis for caching frequently accessed data.</p>
+                        </div>
+                        <div class="analysis-box">
+                            <h4>Solution</h4>
+                            <p>Developed a scalable microservices architecture with load balancing and implemented efficient data synchronization protocols.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-  <!-- Experience Section -->
-  <section id="experience" class="container">
-    <h2>Experience</h2>
-    <div class="card">
-      <h3>Halyk Bank</h3>
-      <p><strong>Role:</strong> Software Developer (Sep 2023 – Jan 2024)</p>
-      <p><strong>Location:</strong> Almaty, Almaty</p>
-      <p>Developed and optimized SQL scripts to reduce storage space for client data in the bank’s database. Resolved web development issues to enhance the functionality and appearance of the internal bank website. Contributed to the development of digital robots to automate tasks within the bank’s systems.</p>
-    </div>
-    <div class="card">
-      <h3>Centras Capital</h3>
-      <p><strong>Role:</strong> Software Engineer (Sep 2022 – May 2023)</p>
-      <p><strong>Location:</strong> Astana, Astana</p>
-      <p>Redesigned the company’s system to improve organization and client data management. Contributed to the design and development of the company’s main website to enhance product and service sales and drive business growth.</p>
-    </div>
-    <div class="card">
-      <h3>Apex Interactive</h3>
-      <p><strong>Role:</strong> Software Engineering Intern (Jun 2022 – Aug 2022)</p>
-      <p><strong>Location:</strong> Astana, Astana</p>
-      <p>Developed an online web assistant to automate client support services for the company’s clients, including Coca Cola and multiple streamers.</p>
-    </div>
-  </section>
+            <!-- myDoctor Project -->
+            <div class="project">
+                <div class="project-content">
+                    <div class="project-info">
+                        <h3>myDoctor</h3>
+                        <p>A telemedicine platform connecting patients with healthcare providers for virtual consultations.</p>
+                        <div class="project-details">
+                            <ul>
+                                <li>Secure video conferencing integration</li>
+                                <li>Electronic health records management</li>
+                                <li>Appointment scheduling system</li>
+                                <li>Prescription management and digital pharmacy integration</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="project-analysis">
+                        <div class="analysis-box">
+                            <h4>Biggest Problem</h4>
+                            <p>Ensuring HIPAA compliance while maintaining a seamless user experience for both patients and healthcare providers.</p>
+                        </div>
+                        <div class="analysis-box">
+                            <h4>Method</h4>
+                            <p>Implemented end-to-end encryption and secure data storage with regular security audits and compliance checks.</p>
+                        </div>
+                        <div class="analysis-box">
+                            <h4>Solution</h4>
+                            <p>Created a secure platform with role-based access control, encrypted video calls, and automated compliance monitoring.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-  <!-- Education Section -->
-  <section id="education" class="container">
-    <h2>Education</h2>
-    <div class="card">
-      <h3>University of the Pacific</h3>
-      <p><strong>Degree:</strong> B.S. & M.S. in Computer Science (Expected Graduation, May 2025)</p>
-      <p><strong>Location:</strong> California, Stockton</p>
-      <p><strong>Concentrations:</strong> Software Development and AI Development</p>
-      <p><strong>Relevant Coursework:</strong> Advanced Software Engineering, Application Development, Data Structures & Algorithms, Objects & Design, Machine Learning, Artificial Intelligence in Healthcare, Object-Oriented Programming, Advanced Algorithms, Advanced Graphics Programming, Web Applications, Parallel Computing</p>
-    </div>
-  </section>
+            <!-- myGymbro Project -->
+            <div class="project">
+                <div class="project-content">
+                    <div class="project-info">
+                        <h3>myGymbro</h3>
+                        <p>A fitness companion app that helps users track workouts, connect with workout partners, and achieve fitness goals.</p>
+                        <div class="project-details">
+                            <ul>
+                                <li>Custom workout plan creation</li>
+                                <li>Progress tracking and analytics</li>
+                                <li>Social features for finding workout partners</li>
+                                <li>Nutrition tracking and meal planning</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="project-analysis">
+                        <div class="analysis-box">
+                            <h4>Biggest Problem</h4>
+                            <p>Creating an engaging social platform while maintaining user privacy and preventing spam or inappropriate content.</p>
+                        </div>
+                        <div class="analysis-box">
+                            <h4>Method</h4>
+                            <p>Implemented AI-powered content moderation and user verification system with community guidelines enforcement.</p>
+                        </div>
+                        <div class="analysis-box">
+                            <h4>Solution</h4>
+                            <p>Developed a robust user matching algorithm with privacy controls and automated content filtering system.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-  <!-- Activities & Leadership Section -->
-  <section id="activities" class="container">
-    <h2>Activities & Leadership</h2>
-    <div class="card">
-      <h3>Google Developers Club</h3>
-      <p><strong>Role:</strong> Member (Jan 2024 – Current)</p>
-      <p><strong>Location:</strong> California, Stockton</p>
-      <p>Represented UOP at the 2024 CalHacks Hackathon hosted by UC Berkeley and developed the mobile app FreshEyes, receiving over 30 positive reviews from judges, sponsors, and students.</p>
-    </div>
-    <div class="card">
-      <h3>Research Group</h3>
-      <p><strong>Role:</strong> Member (Sep 2024 – Current)</p>
-      <p><strong>Location:</strong> California, Stockton</p>
-      <p>Assisted in hosting a game presentation demo for university students.</p>
-    </div>
-  </section>
+            <!-- Calculator Project -->
+            <div class="project">
+                <h3>Calculator</h3>
+                <div class="calculator">
+                    <input type="text" id="calc-display" disabled>
+                    <div class="buttons">
+                        <button onclick="clearDisplay()">C</button>
+                        <button onclick="deleteLast()">DEL</button>
+                        <button onclick="appendOperator('/')">/</button>
+                        <button onclick="appendOperator('*')">*</button>
 
-  <!-- Skills Section -->
-  <section id="skills" class="container">
-    <h2>Skills</h2>
-    <div class="card">
-      <p><strong>Programming:</strong> Python3, Java, JavaScript, HTML/CSS, SQL, MATLAB, C++, C, Flutter</p>
-    </div>
-  </section>
+                        <button onclick="appendNumber('7')">7</button>
+                        <button onclick="appendNumber('8')">8</button>
+                        <button onclick="appendNumber('9')">9</button>
+                        <button onclick="appendOperator('-')">-</button>
 
-  <!-- Contact Section -->
-  <section id="contact" class="container">
-    <h2>Contact</h2>
-    <div class="card">
-      <p>If you would like to get in touch, please email or call:</p>
-      <p>Email: <a href="mailto:gg.bex.abdi@gmail.com">gg.bex.abdi@gmail.com</a></p>
-      <p>Phone: (209)-905-8695</p>
-    </div>
-  </section>
+                        <button onclick="appendNumber('4')">4</button>
+                        <button onclick="appendNumber('5')">5</button>
+                        <button onclick="appendNumber('6')">6</button>
+                        <button onclick="appendOperator('+')">+</button>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Bekzhan (Bex) Abdimanapov. All rights reserved.</p>
-  </footer>
+                        <button onclick="appendNumber('1')">1</button>
+                        <button onclick="appendNumber('2')">2</button>
+                        <button onclick="appendNumber('3')">3</button>
+                        <button onclick="calculate()">=</button>
+
+                        <button onclick="appendNumber('0')" class="zero">0</button>
+                        <button onclick="appendNumber('.')">.</button>
+                    </div>
+                </div>
+            </div>
+            <div class="project">
+                <h3>Snake Game</h3>
+                <p>A classic Snake game implemented in JavaScript.</p>
+                <div id="gameContainer">
+                    <canvas id="gameBoard" width="400" height="400"></canvas>
+                    <div id="scoreText">Score: 0</div>
+                    <button id="startButton">Start Game</button>
+                </div>
+            </div>
+            <div class="project">
+                <h3>Bit Programming Language</h3>
+                <p>A custom programming language implementation.</p>
+                <button onclick="runBitProgram()">Run Bit</button>
+                <pre id="bit-output"></pre>
+            </div>
+        </section>
+
+        <!-- Adding Resume information here -->
+        <section id="resume">
+            <h2>Resume</h2>
+            <div class="resume-section">
+                <h3>Profile</h3>
+                <p>Highly motivated Application Developer seeking a part-time position. Proficient in multiple
+                    programming languages and frameworks with experience in web development, software engineering, and
+                    project management.</p>
+
+                <h3>Skills</h3>
+                <div class="skills-container">
+                    <ul>
+                        <li>Java - Skillful</li>
+                        <li>C++ - Skillful</li>
+                        <li>Python3 - Skillful</li>
+                        <li>C - Skillful</li>
+                    </ul>
+                    <ul>
+                        <li>HTML - Experienced</li>
+                        <li>JavaScript - Skillful</li>
+                        <li>CSS - Experienced</li>
+                        <li>SQL - Skillful</li>
+                        <li>R - Skillful</li>
+                    </ul>
+                </div>
+
+                <h3>Education</h3>
+                <p><strong>M.S. Computer Science</strong>, University of the Pacific (Dec 2023 - Present), GPA: 3.3</p>
+                <p><strong>B.S. Computer Science</strong>, University of the Pacific (Sep 2017 - Mar 2021), GPA: 3.2</p>
+
+                <h3>Experience</h3>
+                <p><strong>Web Developer</strong>, HALYK BANK (June 2019 - Aug 2019)</p>
+                <ul>
+                    <li>Used HTML, CSS, and JavaScript to redesign and enhance the corporate website.</li>
+                    <li>Utilized SQL for data testing.</li>
+                </ul>
+                <p><strong>Software Developer</strong>, APEX INTERACTIVE (June 2018 - Aug 2019)</p>
+                <ul>
+                    <li>Created social media bots for customer service.</li>
+                    <li>Developed Instagram software to boost new accounts.</li>
+                </ul>
+                <p><strong>Web Developer</strong>, PREMIER INVEST (June 2020 - Dec 2023)</p>
+                <ul>
+                    <li>Designed and implemented a new website to sell customer services and goods.</li>
+                </ul>
+
+                <h3>Languages</h3>
+                <ul>
+                    <li>Russian - Native speaker</li>
+                    <li>English - Professional</li>
+                    <li>Kazakh - Native speaker</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:b_abdimanapov@u.pacific.edu">b_abdimanapov@u.pacific.edu</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Bex Abdimanapov. All rights reserved.</p>
+    </footer>
+
 </body>
+
 </html>
