@@ -99,6 +99,7 @@ h3 {
   margin-bottom: 30px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  position: relative;
 }
 
 .project:hover {
@@ -428,4 +429,30 @@ body {
   font-size: 28px;
   font-weight: 600;
   margin-bottom: 10px;
+}
+
+/* Project side images for scroll-based reveal */
+.project-image-left,
+.project-image-right {
+  position: absolute;
+  top: 50%;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  opacity: 0;
+  transform: translateY(-50%) scale(0.95);
+  pointer-events: none;
+  transition: opacity 0.6s cubic-bezier(0.4,0,0.2,1), transform 0.6s cubic-bezier(0.4,0,0.2,1);
+  z-index: 2;
+}
+.project-image-left {
+  left: -140px;
+}
+.project-image-right {
+  right: -140px;
+}
+.project.in-view .project-image-left,
+.project.in-view .project-image-right {
+  opacity: 1;
+  transform: translateY(-50%) scale(1);
 }

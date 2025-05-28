@@ -327,3 +327,31 @@ function calculate() {
     }
 }
 
+// Project image reveal on scroll (center of viewport)
+const projects = document.querySelectorAll('.project');
+const revealOptions = {
+  root: null,
+  rootMargin: '0px',
+  threshold: Array.from({length: 21}, (_, i) => i * 0.05) // [0, 0.05, ..., 1]
+};
+
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    // Calculate how close the center of the project is to the center of the viewport
+    const rect = entry.target.getBoundingClientRect();
+    const projectCenter = rect.top + rect.height / 2;
+    const viewportCenter = window.innerHeight / 2;
+    const distance = Math.abs(projectCenter - viewportCenter);
+    // 0px = perfect center, 200px+ = far
+    if (distance < 200 && entry.isIntersecting) {
+      entry.target.classList.add('in-view');
+    } else {
+      entry.target.classList.remove('in-view');
+    }
+  });
+}, revealOptions);
+
+projects.forEach(project => {
+  revealObserver.observe(project);
+});
+
