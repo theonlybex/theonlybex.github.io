@@ -422,3 +422,10 @@ body {
         min-width: 100%;
     }
 }
+
+/* Make the name in the resume section smaller than the Resume heading */
+.resume-section h1 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
