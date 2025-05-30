@@ -73,7 +73,7 @@
                 <img src="placeholder-left.png" alt="Doctor left" class="project-image-left" />
                 <div class="project-content">
                     <div class="project-info">
-                        <h3>Doctor</h3>
+                        <h3>PocketDoctor</h3>
                         <p>A telemedicine platform connecting patients with healthcare providers for virtual consultations.</p>
                         <div class="project-details">
                             <ul>
@@ -212,6 +212,19 @@
                                 <li>Game state management</li>
                             </ul>
                         </div>
+                        <div id="gameContainer">
+                            <div class="game-board-area">
+                                <canvas id="gameBoard" width="400" height="400"></canvas>
+                                <div id="scoreText">Score: 0</div>
+                            </div>
+                            <div class="button-container">
+                                <div id="start-indicator">
+                                    <span class="indicator-text">press me</span>
+                                    <span class="arrow">&#8594;</span>
+                                </div>
+                                <button id="startButton">Start Game</button>
+                            </div>
+                        </div>
                     </div>
                     <div class="project-analysis">
                         <div class="analysis-box">
@@ -226,17 +239,6 @@
                             <h4>Solution</h4>
                             <p>Developed a responsive and engaging game with optimized performance, smooth controls, and proper game state management.</p>
                         </div>
-                    </div>
-                </div>
-                <div id="gameContainer">
-                    <canvas id="gameBoard" width="400" height="400"></canvas>
-                    <div id="scoreText">Score: 0</div>
-                    <div class="button-container">
-                        <div id="start-indicator">
-                            <span class="indicator-text">press me</span>
-                            <span class="arrow">&#8594;</span>
-                        </div>
-                        <button id="startButton">Start Game</button>
                     </div>
                 </div>
                 <img src="placeholder-right.png" alt="Snake Game right" class="project-image-right" />

@@ -112,7 +112,6 @@ function checkCollision() {
 
 function gameOver() {
     clearInterval(gameLoop);
-    alert(`Game Over! Your score: ${score}`);
     snake = [{ x: 10, y: 10 }];
     dx = 0;
     dy = 0;
