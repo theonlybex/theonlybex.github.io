@@ -231,7 +231,13 @@
                 <div id="gameContainer">
                     <canvas id="gameBoard" width="400" height="400"></canvas>
                     <div id="scoreText">Score: 0</div>
-                    <button id="startButton">Start Game</button>
+                    <div class="button-container">
+                        <div id="start-indicator">
+                            <span class="indicator-text">press me</span>
+                            <span class="arrow">&#8594;</span>
+                        </div>
+                        <button id="startButton">Start Game</button>
+                    </div>
                 </div>
                 <img src="placeholder-right.png" alt="Snake Game right" class="project-image-right" />
             </div>
@@ -241,83 +247,85 @@
         <!-- Updated Resume information here -->
         <section id="resume">
             <h2>Resume</h2>
-            <div class="resume-section">
-                <h1>Bekzhan Abdi</h1>
-                <!-- Contact info removed from here -->
+            <div class="project">
+             <div class="resume-section">
+                 <h1>Bekzhan Abdi</h1>
+                 <!-- Contact info removed from here -->
 
-                <h3>Technical Skills</h3>
-                <ul>
-                    <li><strong>Languages:</strong> Python, JavaScript, Java, TypeScript, HTML, CSS, SQL, C++</li>
-                    <li><strong>Frameworks:</strong> React, Node.js, TensorFlow, PyTorch</li>
-                    <li><strong>Developer Tools:</strong> Git, VSCode, Rider, Agile, StackOverflow, Unity, Flutter</li>
-                </ul>
+                 <h3>Technical Skills</h3>
+                 <ul>
+                     <li><strong>Languages:</strong> Python, JavaScript, Java, TypeScript, HTML, CSS, SQL, C++</li>
+                     <li><strong>Frameworks:</strong> React, Node.js, TensorFlow, PyTorch</li>
+                     <li><strong>Developer Tools:</strong> Git, VSCode, Rider, Agile, StackOverflow, Unity, Flutter</li>
+                 </ul>
 
-                <h3>Selected Projects</h3>
-                <ul>
-                    <li><strong>Evee</strong> | <em>Python, whisper.cpp, OpenAI GPT, pywinauto, pyautogui, winrt, PyQt 6</em> <span style="float:right">Dec 2024 – Present</span>
-                        <ul>
-                            <li>Integrated a natural-language voice command interface, enabling AI assistants to execute 100+ OS-level tasks and cutting manual workflows by 20%.</li>
-                            <li>Automated an average of 10 repetitive desktop operations per day, boosting user productivity through system-level scripting and GUI automation.</li>
-                            <li>Enhanced accessibility by incorporating voice-driven controls, improving satisfaction scores for users with hearing impairments.</li>
-                        </ul>
-                    </li>
-                    <li><strong>Noisruce</strong> | <em>C#, Unity, Newtonsoft.json, Rider</em> <span style="float:right">Jun 2024 – May 2025</span>
-                        <ul>
-                            <li>Implemented core gameplay systems in Unity (C#) for 50+ beta testers, including virtual currency, real-time scoreboards, and level-completion timers—raising average session length by 20%.</li>
-                            <li>Led internal QA across 10+ test cases, uncovering and fixing 5 critical bugs, which improved playability and retention rates.</li>
-                            <li>Presented the prototype to 50+ students and faculty, gathering feedback that drove 3 iterative feature releases.</li>
-                        </ul>
-                    </li>
-                    <li><strong>Fresh Eyes</strong> | <em>OpenAI GPT, Python, Flutter</em> <span style="float:right">Oct 2024</span>
-                        <ul>
-                            <li>Spearheaded development of Fresh Eyes, an AI mobile app for CallHacks 2024 that leverages the OpenAI Vision API to classify spoilage on 50+ product images in under 500 ms per image.</li>
-                            <li>Validated proof-of-concept performance by achieving 63% accuracy after two days—demonstrating a strong baseline for real-world spoilage detection.</li>
-                        </ul>
-                    </li>
-                </ul>
+                 <h3>Selected Projects</h3>
+                 <ul>
+                     <li><strong>Evee</strong> | <em>Python, whisper.cpp, OpenAI GPT, pywinauto, pyautogui, winrt, PyQt 6</em> <span style="float:right">Dec 2024 – Present</span>
+                         <ul>
+                             <li>Integrated a natural-language voice command interface, enabling AI assistants to execute 100+ OS-level tasks and cutting manual workflows by 20%.</li>
+                             <li>Automated an average of 10 repetitive desktop operations per day, boosting user productivity through system-level scripting and GUI automation.</li>
+                             <li>Enhanced accessibility by incorporating voice-driven controls, improving satisfaction scores for users with hearing impairments.</li>
+                         </ul>
+                     </li>
+                     <li><strong>Noisruce</strong> | <em>C#, Unity, Newtonsoft.json, Rider</em> <span style="float:right">Jun 2024 – May 2025</span>
+                         <ul>
+                             <li>Implemented core gameplay systems in Unity (C#) for 50+ beta testers, including virtual currency, real-time scoreboards, and level-completion timers—raising average session length by 20%.</li>
+                             <li>Led internal QA across 10+ test cases, uncovering and fixing 5 critical bugs, which improved playability and retention rates.</li>
+                             <li>Presented the prototype to 50+ students and faculty, gathering feedback that drove 3 iterative feature releases.</li>
+                         </ul>
+                     </li>
+                     <li><strong>Fresh Eyes</strong> | <em>OpenAI GPT, Python, Flutter</em> <span style="float:right">Oct 2024</span>
+                         <ul>
+                             <li>Spearheaded development of Fresh Eyes, an AI mobile app for CallHacks 2024 that leverages the OpenAI Vision API to classify spoilage on 50+ product images in under 500 ms per image.</li>
+                             <li>Validated proof-of-concept performance by achieving 63% accuracy after two days—demonstrating a strong baseline for real-world spoilage detection.</li>
+                         </ul>
+                     </li>
+                 </ul>
 
-                <h3>Professional Experience</h3>
-                <ul>
-                    <li><strong>Software Engineer</strong> <br>Halyk Bank <span style="float:right">Oct 2023 – Jan 2024 | Almaty, KZ</span>
-                        <ul>
-                            <li>Engineered Python-based bots to automate 4+ daily banking operations, cutting manual processing time by 10%.</li>
-                            <li>Optimized complex SQL queries to accelerate client data retrieval by 25%.</li>
-                        </ul>
-                    </li>
-                    <li><strong>Software Engineer Intern</strong> <br>Halyk Bank <span style="float:right">Jun 2020 – Aug 2020 | Almaty, KZ</span>
-                        <ul>
-                            <li>Revamped the bank's intranet UI with HTML, CSS, and JavaScript, enhancing navigation efficiency and reducing help-desk tickets by 20% for ~1000 employees.</li>
-                            <li>Optimized webpage layouts and interactive elements, cutting average page load times from 5 s to 3.5 s (30% faster) and boosting user satisfaction.</li>
-                        </ul>
-                    </li>
-                    <li><strong>Software Engineer Intern</strong> <br>Apex Interactive digital agency <span style="float:right">Jun 2019 – Aug 2019 | Remote</span>
-                        <ul>
-                            <li>Developed a Python web assistant that automated 20+ client interactions per day, decreasing manual input time by 40%.</li>
-                            <li>Architected conversation-workflow logic and backend integrations, improving response accuracy and cutting average client wait-time by 35%.</li>
-                        </ul>
-                    </li>
-                </ul>
+                 <h3>Professional Experience</h3>
+                 <ul>
+                     <li><strong>Software Engineer</strong> <br>Halyk Bank <span style="float:right">Oct 2023 – Jan 2024 | Almaty, KZ</span>
+                         <ul>
+                             <li>Engineered Python-based bots to automate 4+ daily banking operations, cutting manual processing time by 10%.</li>
+                             <li>Optimized complex SQL queries to accelerate client data retrieval by 25%.</li>
+                         </ul>
+                     </li>
+                     <li><strong>Software Engineer Intern</strong> <br>Halyk Bank <span style="float:right">Jun 2020 – Aug 2020 | Almaty, KZ</span>
+                         <ul>
+                             <li>Revamped the bank's intranet UI with HTML, CSS, and JavaScript, enhancing navigation efficiency and reducing help-desk tickets by 20% for ~1000 employees.</li>
+                             <li>Optimized webpage layouts and interactive elements, cutting average page load times from 5 s to 3.5 s (30% faster) and boosting user satisfaction.</li>
+                         </ul>
+                     </li>
+                     <li><strong>Software Engineer Intern</strong> <br>Apex Interactive digital agency <span style="float:right">Jun 2019 – Aug 2019 | Remote</span>
+                         <ul>
+                             <li>Developed a Python web assistant that automated 20+ client interactions per day, decreasing manual input time by 40%.</li>
+                             <li>Architected conversation-workflow logic and backend integrations, improving response accuracy and cutting average client wait-time by 35%.</li>
+                         </ul>
+                     </li>
+                 </ul>
 
-                <h3>Education</h3>
-                <ul>
-                    <li><strong>University of the Pacific</strong>, California, Stockton
-                        <ul>
-                            <li>Master of Science in Computer Science <span style="float:right">January 2024 - May 2025</span></li>
-                            <li>Bachelor of Science in Computer Science <span style="float:right">September 2017 - May 2021</span></li>
-                            <li>Concentration: Software Engineering</li>
-                        </ul>
-                    </li>
-                </ul>
+                 <h3>Education</h3>
+                 <ul>
+                     <li><strong>University of the Pacific</strong>, California, Stockton
+                         <ul>
+                             <li>Master of Science in Computer Science <span style="float:right">January 2024 - May 2025</span></li>
+                             <li>Bachelor of Science in Computer Science <span style="float:right">September 2017 - May 2021</span></li>
+                             <li>Concentration: Software Engineering</li>
+                         </ul>
+                     </li>
+                 </ul>
 
-                <h3>Competitions</h3>
-                <ul>
-                    <li><strong>Google Developers Club</strong>, California, San Francisco <span style="float:right">Jan 2024 – Present</span>
-                        <ul>
-                            <li>Represented University of the Pacific at CallHacks 2024 hosted by UC Berkley.</li>
-                            <li>Co-developed "Fresh Eyes" a mobile app that received over 30 positive reviews from hackathon judges, sponsors and event participants.</li>
-                        </ul>
-                    </li>
-                </ul>
+                 <h3>Competitions</h3>
+                 <ul>
+                     <li><strong>Google Developers Club</strong>, California, San Francisco <span style="float:right">Jan 2024 – Present</span>
+                         <ul>
+                             <li>Represented University of the Pacific at CallHacks 2024 hosted by UC Berkley.</li>
+                             <li>Co-developed "Fresh Eyes" a mobile app that received over 30 positive reviews from hackathon judges, sponsors and event participants.</li>
+                         </ul>
+                     </li>
+                 </ul>
+             </div>
             </div>
         </section>
 
@@ -325,10 +333,10 @@
             <h2>Contact</h2>
             <div class="contact-box">
                 <ul class="contact-list">
-                    <li><a href="tel:2099058695">209-905-8695</a></li>
-                    <li><a href="mailto:itsbebox@gmail.com">itsbebox@gmail.com</a></li>
-                    <li><a href="https://www.linkedin.com/in/bekzhan-bex/">LinkedIn</a></li>
-                    <li><a href="https://github.com/theonlybex">GitHub</a></li>
+                    <li><a href="tel:2099058695" target="_blank">209-905-8695</a></li>
+                    <li><a href="mailto:itsbebox@gmail.com" target="_blank">itsbebox@gmail.com</a></li>
+                    <li><a href="https://www.linkedin.com/in/bekzhan-bex/" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://github.com/theonlybex" target="_blank">GitHub</a></li>
                 </ul>
             </div>
         </section>

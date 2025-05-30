@@ -190,7 +190,27 @@ footer {
   padding: 10px 20px;
 }
 
-/* Two-column layout for the skills section */
+/* Style for the "press me" indicator */
+#start-indicator {
+  display: flex;
+  align-items: center;
+  margin-right: 10px; /* Space between indicator and button */
+  color: #bbb;
+  font-size: 16px;
+}
+
+#start-indicator .arrow {
+  margin-right: 5px; /* Space between arrow and text */
+  font-size: 20px;
+}
+
+/* Container for the button and indicator to align them */
+.button-container {
+  display: flex;
+  align-items: center;
+  margin-top: 10px; /* Keep space above the button area */
+}
+
 /* Two-column layout for the skills section */
 .skills-container {
   display: flex;
@@ -501,7 +521,7 @@ body {
 }
 
 .contact-box {
-  background: #111;
+  background: #fff;
   border-radius: 20px;
   padding: 32px 24px;
   display: flex;
@@ -521,18 +541,18 @@ body {
 }
 
 .contact-list li {
-  color: #fff;
+  color: #1d1d1f;
   font-size: 1.15rem;
   font-weight: 500;
 }
 
 .contact-list a {
-  color: #4fc3f7;
+  color: #1d1d1f;
   text-decoration: none;
   transition: color 0.2s;
 }
 
 .contact-list a:hover {
-  color: #fff;
+  color: #555;
   text-decoration: underline;
 }
