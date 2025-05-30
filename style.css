@@ -459,3 +459,80 @@ body {
   opacity: 1;
   transform: translateY(-50%) scale(1);
 }
+
+#scroll-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0 0 0;
+  height: 80px;
+  animation: fadeIn 1s;
+  z-index: 10;
+}
+
+#scroll-indicator .arrow {
+  font-size: 2.5rem;
+  animation: bounce 1.2s infinite;
+  color: #bbb;
+}
+
+#scroll-indicator .scroll-text {
+  font-size: 1.2rem;
+  color: #bbb;
+  margin-top: 8px;
+  letter-spacing: 1px;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(12px); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+#scroll-indicator.hide {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s;
+}
+
+.contact-box {
+  background: #111;
+  border-radius: 20px;
+  padding: 32px 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 40px auto;
+  max-width: 700px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+.contact-list {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-list li {
+  color: #fff;
+  font-size: 1.15rem;
+  font-weight: 500;
+}
+
+.contact-list a {
+  color: #4fc3f7;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.contact-list a:hover {
+  color: #fff;
+  text-decoration: underline;
+}

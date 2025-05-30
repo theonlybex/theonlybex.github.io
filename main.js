@@ -232,6 +232,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const storyText = document.getElementById('storyText');
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('nav a');
+    const scrollIndicator = document.getElementById('scroll-indicator');
+    const projectsSection = document.getElementById('projects');
 
     // The space-themed story to be typed out
     const spaceStory = `In the vastness of space, stars flicker like distant memories...
@@ -270,6 +272,10 @@ Welcome to the universe of development.`;
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('active');  // Add 'active' class when in view
+                // Hide scroll indicator when projects section is visible
+                if (entry.target.id === 'projects' && scrollIndicator) {
+                    scrollIndicator.classList.add('hide');
+                }
             }
         });
     }, observerOptions);
