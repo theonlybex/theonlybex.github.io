@@ -217,19 +217,102 @@ footer {
 
 /* Two-column layout for the skills section */
 .skills-container {
+  width: 100%;
+  overflow: hidden;
+  background: #f5f5f7;
+  border-radius: 20px;
+  padding: 20px 0;
+  margin: 20px 0;
   display: flex;
-  justify-content: flex-start;
-  gap: 30px;
-  /* Reduces the space between the two columns */
+  flex-direction: column;
+  gap: 20px;
+  border: 2px solid #000;
+  box-shadow: none;
 }
 
-.skills-container ul {
-  list-style-type: none;
-  padding: 0;
+.skills-scroll {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
 }
 
-.skills-container ul li {
-  margin-bottom: 10px;
+.skills-track {
+  display: flex;
+  animation: scroll 30s linear infinite;
+  width: fit-content;
+}
+
+.skills-track.reverse {
+  animation: scroll-reverse 30s linear infinite;
+}
+
+.skill-item {
+  padding: 15px;
+  margin: 0 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  background: white;
+}
+
+.skill-item i {
+  font-size: 60px;
+}
+
+/* Brand Colors */
+.skill-item.python { color: #3776AB; }
+.skill-item.javascript { color: #F7DF1E; }
+.skill-item.java { color: #007396; }
+.skill-item.typescript { color: #3178C6; }
+.skill-item.html { color: #E34F26; }
+.skill-item.css { color: #1572B6; }
+.skill-item.sql { color: #336791; }
+.skill-item.cpp { color: #00599C; }
+.skill-item.react { color: #61DAFB; }
+.skill-item.node { color: #339933; }
+.skill-item.tensorflow { color: #FF6F00; }
+.skill-item.pytorch { color: #EE4C2C; }
+.skill-item.git { color: #F05032; }
+.skill-item.vscode { color: #007ACC; }
+.skill-item.rider { color: #000000; }
+.skill-item.unity { color: #000000; }
+.skill-item.flutter { color: #02569B; }
+.skill-item.agile { color: #2E8BC0; }
+.skill-item.stackoverflow { color: #F48024; }
+
+.skill-item:hover {
+  transform: scale(1.1);
+  filter: brightness(1.1);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes scroll-reverse {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Pause animation on hover */
+.skills-track:hover {
+  animation-play-state: paused;
 }
 
 /* Initial hidden state for sections */
