@@ -247,7 +247,7 @@ footer {
 }
 
 .skill-item {
-  padding: 15px;
+  padding: 0;
   margin: 0 10px;
   border-radius: 20px;
   white-space: nowrap;
@@ -255,37 +255,48 @@ footer {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 70px;
   height: 70px;
   background: white;
+  text-align: center;
+  box-sizing: border-box;
 }
 
 .skill-item i {
-  font-size: 60px;
+  font-size: 45px;
+  margin-bottom: 1px;
+}
+
+.skill-item span {
+  font-size: 11px;
+  color: #1d1d1f;
+  white-space: normal;
+  line-height: 1.1;
 }
 
 /* Brand Colors */
-.skill-item.python { color: #3776AB; }
-.skill-item.javascript { color: #F7DF1E; }
-.skill-item.java { color: #007396; }
-.skill-item.typescript { color: #3178C6; }
-.skill-item.html { color: #E34F26; }
-.skill-item.css { color: #1572B6; }
-.skill-item.sql { color: #336791; }
-.skill-item.cpp { color: #00599C; }
-.skill-item.react { color: #61DAFB; }
-.skill-item.node { color: #339933; }
-.skill-item.tensorflow { color: #FF6F00; }
-.skill-item.pytorch { color: #EE4C2C; }
-.skill-item.git { color: #F05032; }
-.skill-item.vscode { color: #007ACC; }
-.skill-item.rider { color: #000000; }
-.skill-item.unity { color: #000000; }
-.skill-item.flutter { color: #02569B; }
-.skill-item.agile { color: #2E8BC0; }
-.skill-item.stackoverflow { color: #F48024; }
+.skill-item.python i { color: #3776AB; }
+.skill-item.javascript i { color: #F7DF1E; }
+.skill-item.java i { color: #007396; }
+.skill-item.typescript i { color: #3178C6; }
+.skill-item.html i { color: #E34F26; }
+.skill-item.css i { color: #1572B6; }
+.skill-item.sql i { color: #336791; }
+.skill-item.cpp i { color: #00599C; }
+.skill-item.react i { color: #61DAFB; }
+.skill-item.node i { color: #339933; }
+.skill-item.tensorflow i { color: #FF6F00; }
+.skill-item.pytorch i { color: #EE4C2C; }
+.skill-item.git i { color: #F05032; }
+.skill-item.vscode i { color: #007ACC; }
+.skill-item.rider i { color: #000000; }
+.skill-item.unity i { color: #000000; }
+.skill-item.flutter i { color: #02569B; }
+.skill-item.agile i { color: #2E8BC0; }
+.skill-item.stackoverflow i { color: #F48024; }
 
 .skill-item:hover {
   transform: scale(1.1);
@@ -297,13 +308,13 @@ footer {
     transform: translateX(-50%);
   }
   100% {
-    transform: translateX(0);
+    transform: translateX(0%);
   }
 }
 
 @keyframes scroll-reverse {
   0% {
-    transform: translateX(0);
+    transform: translateX(0%);
   }
   100% {
     transform: translateX(-50%);
