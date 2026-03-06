@@ -49,6 +49,8 @@ body {
   border-right: 1px solid var(--border);
   padding: 1.25rem 0;
   flex-shrink: 0;
+  position: relative;
+  z-index: 1;
 }
 
 .sidebar-section {
@@ -137,6 +139,8 @@ body {
   padding: 2rem 2.5rem 3rem;
   overflow-y: auto;
   max-width: 720px;
+  position: relative;
+  z-index: 1;
 }
 
 .content-header {

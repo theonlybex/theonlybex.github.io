@@ -146,14 +146,19 @@ document.addEventListener('DOMContentLoaded', () => {
   function resize() {
     const wrap = canvas.parentElement;
     const dpr = Math.min(window.devicePixelRatio || 1, 2);
-    const w = Math.floor(wrap.clientWidth * dpr);
-    const h = Math.floor(wrap.clientHeight * dpr);
+    let w = Math.floor((wrap.clientWidth || 400) * dpr);
+    let h = Math.floor((wrap.clientHeight || 400) * dpr);
+    if (w < 50) w = 400;
+    if (h < 50) h = 400;
     canvas.width = w;
     canvas.height = h;
-    canvas.style.width = wrap.clientWidth + 'px';
-    canvas.style.height = wrap.clientHeight + 'px';
+    canvas.style.width = (wrap.clientWidth || 400) + 'px';
+    canvas.style.height = (wrap.clientHeight || 400) + 'px';
   }
   resize();
   window.addEventListener('resize', resize);
-  draw();
+  requestAnimationFrame(function startDraw() {
+    resize();
+    draw();
+  });
 });
