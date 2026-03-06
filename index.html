@@ -4,377 +4,173 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>myPortfolio</title>
+    <title>Bekzhan Abdimanapov | Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <script src="main.js" defer></script>
 </head>
 
 <body>
-
-    <nav>
-        <ul>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#resume">Resume</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <header>
-        <h1>Bekzhan (Bex) Abdimanapov </h1>
-        <p>Software Engineer</p>
-        <div id="storyText"></div> <!-- The story will be typed here -->
-    </header>
-
-    <!-- Scroll Down Indicator -->
-    <div id="scroll-indicator">
-        <span class="arrow">&#8595;</span>
-        <span class="scroll-text">This Way!</span>
-    </div>
-
-    <main>
-        <section id="projects">
-            <h2>Projects</h2>
-            <!-- Evee Project -->
-            <div class="project">
-                <img src="placeholder-left.png" alt="Evee left" class="project-image-left" />
-                <div class="project-content">
-                    <div class="project-info">
-                        <h3>Evee</h3>
-                        <p>A natural-language voice command interface that enables AI assistants to execute OS-level tasks and automate desktop operations.</p>
-                        <div class="project-details">
-                            <ul>
-                                <li>Integrated voice command interface for 100+ OS-level tasks</li>
-                                <li>Automated 10+ daily desktop operations</li>
-                                <li>Enhanced accessibility for users with hearing impairments</li>
-                                <li>Built with Python, whisper.cpp, OpenAI GPT, pywinauto, pyautogui, winrt, PyQt 6</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="project-analysis">
-                        <div class="analysis-box">
-                            <h4>Biggest Problem</h4>
-                            <p>Reducing manual workflows and improving productivity through system-level automation.</p>
-                        </div>
-                        <div class="analysis-box">
-                            <h4>Method</h4>
-                            <p>Implemented voice-driven controls and system-level scripting for desktop automation.</p>
-                        </div>
-                        <div class="analysis-box">
-                            <h4>Solution</h4>
-                            <p>Developed an AI-powered voice interface that cut manual workflows by 20% and improved user satisfaction scores.</p>
-                        </div>
-                    </div>
-                </div>
-                <img src="placeholder-right.png" alt="Evee right" class="project-image-right" />
-            </div>
-
-            <!-- Noisruce Project -->
-            <div class="project">
-                <img src="placeholder-left.png" alt="Noisruce left" class="project-image-left" />
-                <div class="project-content">
-                    <div class="project-info">
-                        <h3>Noisruce</h3>
-                        <p>A Unity-based game with core gameplay systems including virtual currency, real-time scoreboards, and level-completion timers.</p>
-                        <div class="project-details">
-                            <ul>
-                                <li>Implemented core gameplay systems for 50+ beta testers</li>
-                                <li>Led internal QA across 10+ test cases</li>
-                                <li>Presented prototype to 50+ students and faculty</li>
-                                <li>Built with C#, Unity, Newtonsoft.json, Rider</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="project-analysis">
-                        <div class="analysis-box">
-                            <h4>Biggest Problem</h4>
-                            <p>Creating engaging gameplay systems while maintaining performance and playability.</p>
-                        </div>
-                        <div class="analysis-box">
-                            <h4>Method</h4>
-                            <p>Implemented comprehensive gameplay systems and conducted thorough QA testing.</p>
-                        </div>
-                        <div class="analysis-box">
-                            <h4>Solution</h4>
-                            <p>Developed a polished game prototype that increased average session length by 20% and fixed critical bugs for improved retention.</p>
-                        </div>
-                    </div>
-                </div>
-                <img src="placeholder-right.png" alt="Noisruce right" class="project-image-right" />
-            </div>
-
-            <!-- Fresh Eyes Project -->
-            <div class="project">
-                <img src="placeholder-left.png" alt="Fresh Eyes left" class="project-image-left" />
-                <div class="project-content">
-                    <div class="project-info">
-                        <h3>Fresh Eyes</h3>
-                        <p>An AI mobile app that leverages OpenAI Vision API to detect product spoilage in real-time.</p>
-                        <div class="project-details">
-                            <ul>
-                                <li>Classified 50+ product images in under 500ms per image</li>
-                                <li>Achieved 63% accuracy in spoilage detection</li>
-                                <li>Developed for CallHacks 2024</li>
-                                <li>Built with OpenAI GPT, Python, Flutter</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="project-analysis">
-                        <div class="analysis-box">
-                            <h4>Biggest Problem</h4>
-                            <p>Creating an accurate and fast spoilage detection system for real-world applications.</p>
-                        </div>
-                        <div class="analysis-box">
-                            <h4>Method</h4>
-                            <p>Utilized OpenAI Vision API for image classification and implemented efficient processing algorithms.</p>
-                        </div>
-                        <div class="analysis-box">
-                            <h4>Solution</h4>
-                            <p>Developed a proof-of-concept mobile app that demonstrated strong baseline performance for real-world spoilage detection.</p>
-                        </div>
-                    </div>
-                </div>
-                <img src="placeholder-right.png" alt="Fresh Eyes right" class="project-image-right" />
-            </div>
-
-            <!-- Calculator Project -->
-            <div class="project">
-                <img src="placeholder-left.png" alt="Calculator left" class="project-image-left" />
-                <div class="project-content">
-                    <div class="project-info">
-                        <h3>Calculator</h3>
-                        <p>A fully functional calculator with basic arithmetic operations and a clean user interface.</p>
-                        <div class="project-details">
-                            <ul>
-                                <li>Basic arithmetic operations</li>
-                                <li>Clear and delete functionality</li>
-                                <li>Responsive design</li>
-                                <li>Error handling for invalid operations</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="project-analysis">
-                        <div class="analysis-box">
-                            <h4>Biggest Problem</h4>
-                            <p>Handling complex mathematical operations and maintaining proper order of operations while ensuring a smooth user experience.</p>
-                        </div>
-                        <div class="analysis-box">
-                            <h4>Method</h4>
-                            <p>Implemented a robust calculation engine with proper operator precedence and error handling for edge cases.</p>
-                        </div>
-                        <div class="analysis-box">
-                            <h4>Solution</h4>
-                            <p>Created a reliable calculator with intuitive UI, proper error handling, and support for decimal operations.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="calculator">
-                    <input type="text" id="calc-display" disabled>
-                    <div class="buttons">
-                        <button onclick="clearDisplay()">C</button>
-                        <button onclick="deleteLast()">DEL</button>
-                        <button onclick="appendOperator('/')">/</button>
-                        <button onclick="appendOperator('*')">*</button>
-
-                        <button onclick="appendNumber('7')">7</button>
-                        <button onclick="appendNumber('8')">8</button>
-                        <button onclick="appendNumber('9')">9</button>
-                        <button onclick="appendOperator('-')">-</button>
-
-                        <button onclick="appendNumber('4')">4</button>
-                        <button onclick="appendNumber('5')">5</button>
-                        <button onclick="appendNumber('6')">6</button>
-                        <button onclick="appendOperator('+')">+</button>
-
-                        <button onclick="appendNumber('1')">1</button>
-                        <button onclick="appendNumber('2')">2</button>
-                        <button onclick="appendNumber('3')">3</button>
-                        <button onclick="calculate()">=</button>
-
-                        <button onclick="appendNumber('0')" class="zero">0</button>
-                        <button onclick="appendNumber('.')">.</button>
-                    </div>
-                </div>
-                <img src="placeholder-right.png" alt="Calculator right" class="project-image-right" />
-            </div>
-
-            <!-- Snake Game Project -->
-            <div class="project">
-                <img src="placeholder-left.png" alt="Snake Game left" class="project-image-left" />
-                <div class="project-content">
-                    <div class="project-info">
-                        <h3>Snake Game</h3>
-                        <p>A classic Snake game implemented in JavaScript with modern features and smooth gameplay.</p>
-                        <div class="project-details">
-                            <ul>
-                                <li>Canvas-based rendering</li>
-                                <li>Score tracking system</li>
-                                <li>Responsive controls</li>
-                                <li>Game state management</li>
-                            </ul>
-                        </div>
-                        <div id="gameContainer">
-                            <div class="game-board-area">
-                                <canvas id="gameBoard" width="400" height="400"></canvas>
-                                <div id="scoreText">Score: 0</div>
-                            </div>
-                            <div class="button-container">
-                                <div id="start-indicator">
-                                    <span class="indicator-text">press me</span>
-                                    <span class="arrow">&#8594;</span>
-                                </div>
-                                <button id="startButton">Start Game</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-analysis">
-                        <div class="analysis-box">
-                            <h4>Biggest Problem</h4>
-                            <p>Implementing smooth game mechanics and collision detection while maintaining consistent performance across different devices.</p>
-                        </div>
-                        <div class="analysis-box">
-                            <h4>Method</h4>
-                            <p>Used HTML5 Canvas for rendering and implemented efficient collision detection algorithms with requestAnimationFrame for smooth animation.</p>
-                        </div>
-                        <div class="analysis-box">
-                            <h4>Solution</h4>
-                            <p>Developed a responsive and engaging game with optimized performance, smooth controls, and proper game state management.</p>
-                        </div>
-                    </div>
-                </div>
-                <img src="placeholder-right.png" alt="Snake Game right" class="project-image-right" />
-            </div>
-            
-        </section>
-
-        <!-- Skills Section with Animation -->
-        <section id="skills">
-            <h2>Technical Skills</h2>
-            <div class="skills-container">
-                <!-- First Row -->
-                <div class="skills-scroll">
-                    <div class="skills-track">
-                        <div class="skill-item python"><i class="fab fa-python"></i><span>Python</span></div>
-                        <div class="skill-item javascript"><i class="fab fa-js"></i><span>JavaScript</span></div>
-                        <div class="skill-item java"><i class="fab fa-java"></i><span>Java</span></div>
-                        <div class="skill-item typescript"><i class="fab fa-js"></i><span>TypeScript</span></div>
-                        <div class="skill-item html"><i class="fab fa-html5"></i><span>HTML</span></div>
-                        <div class="skill-item css"><i class="fab fa-css3-alt"></i><span>CSS</span></div>
-                        <div class="skill-item sql"><i class="fas fa-database"></i><span>SQL</span></div>
-                        <div class="skill-item cpp"><i class="fas fa-code"></i><span>C++</span></div>
-                        <div class="skill-item react"><i class="fab fa-react"></i><span>React</span></div>
-                        <div class="skill-item node"><i class="fab fa-node-js"></i><span>Node.js</span></div>
-                        <!-- Duplicate items for seamless loop -->
-                        <div class="skill-item python"><i class="fab fa-python"></i><span>Python</span></div>
-                        <div class="skill-item javascript"><i class="fab fa-js"></i><span>JavaScript</span></div>
-                        <div class="skill-item java"><i class="fab fa-java"></i><span>Java</span></div>
-                        <div class="skill-item typescript"><i class="fab fa-js"></i><span>TypeScript</span></div>
-                        <div class="skill-item html"><i class="fab fa-html5"></i><span>HTML</span></div>
-                        <div class="skill-item css"><i class="fab fa-css3-alt"></i><span>CSS</span></div>
-                    </div>
-                </div>
-                <!-- Second Row -->
-                <div class="skills-scroll">
-                    <div class="skills-track reverse">
-                        <div class="skill-item tensorflow"><i class="fas fa-brain"></i><span>TensorFlow</span></div>
-                        <div class="skill-item pytorch"><i class="fas fa-robot"></i><span>PyTorch</span></div>
-                        <div class="skill-item git"><i class="fab fa-git-alt"></i><span>Git</span></div>
-                        <div class="skill-item vscode"><i class="fas fa-code"></i><span>VSCode</span></div>
-                        <div class="skill-item rider"><i class="fas fa-terminal"></i><span>Rider</span></div>
-                        <div class="skill-item unity"><i class="fas fa-gamepad"></i><span>Unity</span></div>
-                        <div class="skill-item flutter"><i class="fas fa-mobile-alt"></i><span>Flutter</span></div>
-                        <div class="skill-item agile"><i class="fas fa-tasks"></i><span>Agile</span></div>
-                        <div class="skill-item stackoverflow"><i class="fab fa-stack-overflow"></i><span>Stack Overflow</span></div>
-                        <!-- Duplicate items for seamless loop -->
-                        <div class="skill-item tensorflow"><i class="fas fa-brain"></i><span>TensorFlow</span></div>
-                        <div class="skill-item pytorch"><i class="fas fa-robot"></i><span>PyTorch</span></div>
-                        <div class="skill-item git"><i class="fab fa-git-alt"></i><span>Git</span></div>
-                        <div class="skill-item vscode"><i class="fas fa-code"></i><span>VSCode</span></div>
-                        <div class="skill-item rider"><i class="fas fa-terminal"></i><span>Rider</span></div>
-                        <div class="skill-item unity"><i class="fas fa-gamepad"></i><span>Unity</span></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Updated Resume information here -->
-        <section id="resume">
-            <h2>Resume</h2>
-            <div class="project">
-             <div class="resume-section">
-                 <h1>Bekzhan Abdi</h1>
-                 <!-- Contact info removed from here -->
-
-                 <h3>Technical Skills</h3>
-                 <ul>
-                     <li><strong>Languages:</strong> Python, JavaScript, Java, TypeScript, HTML, CSS, SQL, C++</li>
-                     <li><strong>Frameworks:</strong> React, Node.js, TensorFlow, PyTorch</li>
-                     <li><strong>Developer Tools:</strong> Git, VSCode, Rider, Agile, StackOverflow, Unity, Flutter</li>
-                 </ul>
-
-                 <h3>Professional Experience</h3>
-                 <ul>
-                     <li><strong>Software Engineer</strong> <br>Halyk Bank <span style="float:right">Oct 2023 – Jan 2024 | Almaty, KZ</span>
-                         <ul>
-                             <li>Engineered Python-based bots to automate 4+ daily banking operations, cutting manual processing time by 10%.</li>
-                             <li>Optimized complex SQL queries to accelerate client data retrieval by 25%.</li>
-                         </ul>
-                     </li>
-                     <li><strong>Software Engineer Intern</strong> <br>Halyk Bank <span style="float:right">Jun 2020 – Aug 2020 | Almaty, KZ</span>
-                         <ul>
-                             <li>Revamped the bank's intranet UI with HTML, CSS, and JavaScript, enhancing navigation efficiency and reducing help-desk tickets by 20% for ~1000 employees.</li>
-                             <li>Optimized webpage layouts and interactive elements, cutting average page load times from 5 s to 3.5 s (30% faster) and boosting user satisfaction.</li>
-                         </ul>
-                     </li>
-                     <li><strong>Software Engineer Intern</strong> <br>Apex Interactive digital agency <span style="float:right">Jun 2019 – Aug 2019 | Remote</span>
-                         <ul>
-                             <li>Developed a Python web assistant that automated 20+ client interactions per day, decreasing manual input time by 40%.</li>
-                             <li>Architected conversation-workflow logic and backend integrations, improving response accuracy and cutting average client wait-time by 35%.</li>
-                         </ul>
-                     </li>
-                 </ul>
-
-                 <h3>Education</h3>
-                 <ul>
-                     <li><strong>University of the Pacific</strong>, California, Stockton
-                         <ul>
-                             <li>Master of Science in Computer Science <span style="float:right">January 2024 - May 2025</span></li>
-                             <li>Bachelor of Science in Computer Science <span style="float:right">September 2017 - May 2021</span></li>
-                             <li>Concentration: Software Engineering</li>
-                         </ul>
-                     </li>
-                 </ul>
-
-                 <h3>Competitions</h3>
-                 <ul>
-                     <li><strong>Google Developers Club</strong>, California, San Francisco <span style="float:right">Jan 2024 – Present</span>
-                         <ul>
-                             <li>Represented University of the Pacific at CallHacks 2024 hosted by UC Berkley.</li>
-                             <li>Co-developed "Fresh Eyes" a mobile app that received over 30 positive reviews from hackathon judges, sponsors and event participants.</li>
-                         </ul>
-                     </li>
-                 </ul>
-             </div>
-            </div>
-        </section>
-
-        <section id="contact">
-            <h2>Contact</h2>
-            <div class="contact-box">
-                <ul class="contact-list">
-                    <li><a href="tel:2099058695" target="_blank">209-905-8695</a></li>
-                    <li><a href="mailto:itsbebox@gmail.com" target="_blank">itsbebox@gmail.com</a></li>
-                    <li><a href="https://www.linkedin.com/in/bekzhan-bex/" target="_blank">LinkedIn</a></li>
-                    <li><a href="https://github.com/theonlybex" target="_blank">GitHub</a></li>
+    <div class="app">
+        <!-- Left pane: Navigation & summary -->
+        <aside class="sidebar">
+            <div class="sidebar-section">
+                <h2 class="sidebar-title">About</h2>
+                <div class="sidebar-sep"></div>
+                <ul class="sidebar-list">
+                    <li class="sidebar-item" data-id="about">Intro</li>
                 </ul>
             </div>
-        </section>
-    </main>
+            <div class="sidebar-section">
+                <h2 class="sidebar-title">Experience</h2>
+                <div class="sidebar-sep"></div>
+                <ul class="sidebar-list" data-section="experience">
+                    <li class="sidebar-item" data-id="wondish">
+                        <span class="role">Applied AI Engineer</span>
+                        <span class="company">@ Wondish</span>
+                    </li>
+                    <li class="sidebar-item" data-id="leechy">
+                        <span class="role">AI Software Engineer</span>
+                        <span class="company">@ Leechy LLC</span>
+                    </li>
+                    <li class="sidebar-item" data-id="halyk">
+                        <span class="role">Software Engineer</span>
+                        <span class="company">@ Halyk Bank</span>
+                    </li>
+                </ul>
+                <span class="pagination">1 of 3</span>
+            </div>
 
-    <footer>
-        <p>&copy; 2024 Bex Abdimanapov. All rights reserved.</p>
-    </footer>
+            <div class="sidebar-section">
+                <h2 class="sidebar-title">Projects-</h2>
+                <div class="sidebar-sep"></div>
+                <ul class="sidebar-list" data-section="projects">
+                    <li class="sidebar-item" data-id="evee">Evee</li>
+                    <li class="sidebar-item" data-id="tigercat">Tigercat</li>
+                    <li class="sidebar-item" data-id="vocalai">VocalAI</li>
+                </ul>
+                <span class="pagination">1 of 3</span>
+            </div>
 
+            <div class="sidebar-section">
+                <h2 class="sidebar-title">Skills - Tools</h2>
+                <div class="sidebar-sep"></div>
+                <ul class="sidebar-list skills-list" data-section="skills">
+                    <li class="sidebar-item" data-id="skills-detail">Python</li>
+                    <li class="sidebar-item" data-id="skills-detail">TypeScript</li>
+                    <li class="sidebar-item" data-id="skills-detail">JavaScript</li>
+                    <li class="sidebar-item" data-id="skills-detail">Next.js</li>
+                    <li class="sidebar-item" data-id="skills-detail">React</li>
+                    <li class="sidebar-item" data-id="skills-detail">Node.js</li>
+                    <li class="sidebar-item" data-id="skills-detail">SQL</li>
+                    <li class="sidebar-item" data-id="skills-detail">Git</li>
+                    <li class="sidebar-item" data-id="skills-detail">LangChain</li>
+                    <li class="sidebar-item" data-id="skills-detail">OpenAI API</li>
+                </ul>
+                <span class="pagination">1 of 2</span>
+            </div>
+        </aside>
+
+        <!-- Right pane: Main content -->
+        <main class="content">
+            <header class="content-header">
+                <pre class="ascii-name" aria-hidden="true">
+ ___  _____ _  __ ___ _   _ 
+| _ )|_   _| |/ /|_ _| | | |
+| _ \  | | | ' &lt;  | || |_| |
+|___/  |_| |_|\_\|___|\___/ 
+                </pre>
+                <p class="full-name">Bekzhan Abdimanapov</p>
+            </header>
+
+            <!-- About (default view) -->
+            <section id="about" class="content-section active">
+                <p class="intro">Hi, I'm <strong>Bekzhan Abdimanapov</strong>. A backend-focused software engineer and <span class="accent">AI/ML practitioner</span>.</p>
+                <p>I build production systems with <strong>Python</strong>, <strong>TypeScript</strong>, and modern AI tooling. I care about <span class="accent">clean APIs</span>, <strong>UX</strong>, and shipping things that work. MS in Computer Science (AI/ML) from University of the Pacific.</p>
+                <p class="links">
+                    <a href="https://www.linkedin.com/in/bexs" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="https://github.com/theonlybex" target="_blank" rel="noopener">GitHub</a>
+                    <a href="mailto:itsbebox@gmail.com" class="resume-link">resumé</a>
+                    <span class="sub">printable: <a href="#resume-pdf">PDF</a></span>
+                </p>
+                <p class="nav-hint"><span class="link-style">Click</span> on a section on the left to learn more. You can also use the <span class="link-style">arrow keys</span> or <span class="link-style">Vim motions</span> (j/k).</p>
+                <blockquote class="quote">
+                    <span class="quote-icon" aria-hidden="true">"</span>
+                    <p>You fear the sword, so the sword I will bring against you, declares the Sovereign Lord.</p>
+                    <cite>Ezekiel 11:8</cite>
+                </blockquote>
+            </section>
+
+            <!-- Experience details -->
+            <section id="wondish" class="content-section">
+                <h2>Applied AI Engineer <span class="company">@ Wondish</span></h2>
+                <p class="meta">San Francisco, USA · Feb 2026 – Present</p>
+                <ul>
+                    <li>Fine-tuned an Ollama LLM on proprietary recipe data to deliver personalized dish recommendations, improving user engagement and customization accuracy.</li>
+                    <li>Integrated and deployed the fine-tuned model into a production web application, enabling real-time inference and scalable user personalization.</li>
+                </ul>
+            </section>
+            <section id="leechy" class="content-section">
+                <h2>AI Software Engineer <span class="company">@ Leechy LLC</span></h2>
+                <p class="meta">San Jose, USA · Aug 2025 – Jan 2026</p>
+                <ul>
+                    <li>Rebuilt company website with TypeScript, Next.js, Supabase, improving usability and backend integration.</li>
+                    <li>Developed an AI support assistant using OpenAI API, LangChain (RAG with Pinecone), and Redis, enhancing navigation and adding autofill feature.</li>
+                </ul>
+            </section>
+            <section id="halyk" class="content-section">
+                <h2>Software Engineer <span class="company">@ Halyk Bank</span></h2>
+                <p class="meta">Almaty, KZ · Oct 2023 – Jan 2024</p>
+                <ul>
+                    <li>Designed and deployed production-level Python RPA bots to automate core banking workflows, reducing team manual workload by 2+ hours daily.</li>
+                    <li>Optimized SQL queries (10M+ records) on MS SQL Server, cutting execution time and improving analytics.</li>
+                </ul>
+            </section>
+
+            <!-- Project details -->
+            <section id="evee" class="content-section">
+                <h2>Evee</h2>
+                <p class="meta">Python, whisper.cpp, Mistral 3 B Instruct · Dec 2024 – Present</p>
+                <ul>
+                    <li>Built a Python voice assistant using whisper.cpp and Mistral 3 B Instruct, automating daily Windows tasks through voice commands.</li>
+                    <li>Added Chrome automation with Selenium and PyAutoGUI, expanding automatable workflows and increasing task coverage.</li>
+                </ul>
+            </section>
+            <section id="tigercat" class="content-section">
+                <h2>Tigercat</h2>
+                <p class="meta">JavaScript, Canvas LMS REST API · Jun 2025 – Present</p>
+                <ul>
+                    <li>Developed a Chrome Extension AI agent using JavaScript and the Canvas API, automating course files navigation.</li>
+                    <li>Added logic for the agent to analyze and read course data, enabling in-browser tutoring and contextual assistance.</li>
+                </ul>
+            </section>
+            <section id="vocalai" class="content-section">
+                <h2>VocalAI</h2>
+                <p class="meta">TypeScript, Python, Vapi agents · Jun 2025</p>
+                <ul>
+                    <li>Trained voice agent (Vapi model) during a 48-hour hackathon, enabling a production-ready AI signing tutor.</li>
+                    <li>Built the first AI-powered singing voice system—impressed 14 judges and won <strong>1st Place</strong> (Vapi-sponsored) at the 2025 Berkeley Hackathon.</li>
+                </ul>
+            </section>
+
+            <!-- Skills detail -->
+            <section id="skills-detail" class="content-section">
+                <h2>Skills & Tools</h2>
+                <p>Languages, frameworks, and tools I use day to day:</p>
+                <ul class="skills-detail">
+                    <li><span class="accent">Python</span> · TypeScript · JavaScript · SQL</li>
+                    <li><span class="accent">Next.js</span> · React · Node.js</li>
+                    <li>OpenAI API · LangChain · RAG (Pinecone) · Redis</li>
+                    <li>Git · Supabase · MS SQL Server · whisper.cpp</li>
+                </ul>
+                <p class="awards">
+                    <strong>Awards</strong> — Google Developers Student Club (Co-developer). 1st Place CalHacks 2025 (Vapi-sponsored, VocalAI). Represented University of the Pacific at CalHacks 2024.
+                </p>
+            </section>
+        </main>
+    </div>
 </body>
 
 </html>
