@@ -5,11 +5,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bekzhan Abdimanapov | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    <script src="main.js" defer></script>
+    <script src="./main.js" defer></script>
+    <!-- Critical CSS fallback so layout works even if style.css fails to load -->
+    <style>
+      :root {
+        --bg-dark: #0f1419;
+        --bg-sidebar: #151b23;
+        --bg-content: #0f1419;
+        --text: #e6edf3;
+        --text-muted: #8b949e;
+        --accent-orange: #d29922;
+        --accent-blue: #58a6ff;
+        --accent-purple: #a371f7;
+        --border: #21262d;
+        --quote-border: #388bfd;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; font-family: 'JetBrains Mono', 'SF Mono', Consolas, monospace; background: var(--bg-content); color: var(--text); line-height: 1.6; min-height: 100vh; }
+      .app { display: flex; min-height: 100vh; }
+      .sidebar { width: 280px; min-width: 280px; background: var(--bg-sidebar); border-right: 1px solid var(--border); padding: 1.25rem 0; flex-shrink: 0; }
+      .sidebar-section { padding: 0 1rem 1.25rem; }
+      .sidebar-title { font-size: 0.85rem; font-weight: 500; color: var(--text); margin: 0 0 0.35rem 0; }
+      .sidebar-sep { height: 1px; background: var(--border); margin-bottom: 0.75rem; }
+      .sidebar-list { list-style: none; margin: 0; padding: 0; }
+      .sidebar-item { font-size: 0.8rem; padding: 0.35rem 0; cursor: pointer; color: var(--text-muted); display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.25rem; }
+      .sidebar-item:hover { color: var(--text); }
+      .sidebar-item.active { color: var(--accent-orange); }
+      .sidebar-item .company { color: var(--accent-orange); }
+      .content { flex: 1; padding: 2rem 2.5rem 3rem; overflow-y: auto; max-width: 720px; }
+      .content-header { margin-bottom: 1.5rem; }
+      .ascii-name { font-size: clamp(0.65rem, 1.8vw, 0.9rem); line-height: 1.2; margin: 0 0 0.5rem 0; color: var(--text); }
+      .full-name { font-size: 1rem; font-weight: 500; color: var(--text); margin: 0; }
+      .content-section { display: none; }
+      .content-section.active { display: block; }
+      .content-section p { margin: 0 0 1rem 0; font-size: 0.9rem; color: var(--text); }
+      .content-section .accent { color: var(--accent-orange); }
+      .content-section .links a { color: var(--accent-blue); text-decoration: none; }
+      .content-section .resume-link { color: var(--accent-purple) !important; }
+      .content-section .link-style { color: var(--accent-blue); }
+      .quote { border: 1px solid var(--quote-border); border-bottom: none; border-right: none; padding: 1rem 1.25rem; margin: 0; background: rgba(56,139,253,0.06); }
+      .quote p { margin: 0 0 0.5rem 1.5rem; font-size: 0.9rem; font-style: italic; }
+      .quote cite { display: block; font-size: 0.8rem; color: var(--quote-border); font-style: normal; margin-left: 1.5rem; }
+      .content-section h2 { font-size: 1rem; font-weight: 600; margin: 0 0 0.35rem 0; color: var(--text); }
+      .content-section h2 .company { color: var(--accent-orange); }
+      .content-section .meta { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1rem !important; }
+      .content-section ul { margin: 0 0 1rem 0; padding-left: 1.25rem; font-size: 0.88rem; color: var(--text); }
+      .content-section ul li { margin-bottom: 0.5rem; }
+      .content-section .skills-detail { list-style: none; padding-left: 0; }
+      .pagination { font-size: 0.7rem; color: var(--text-muted); margin-top: 0.5rem; display: block; }
+      @media (max-width: 768px) { .app { flex-direction: column; } .sidebar { width: 100%; min-width: 100%; border-right: none; border-bottom: 1px solid var(--border); } .content { padding: 1.5rem 1.25rem 2rem; } }
+    </style>
 </head>
 
 <body>
