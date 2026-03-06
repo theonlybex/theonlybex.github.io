@@ -116,9 +116,8 @@ body {
 .icosahedron-wrap {
   position: fixed;
   top: 0;
-  right: 15%;
-  width: 42%;
-  max-width: 520px;
+  left: 1000px;
+  right: 0;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -331,6 +330,8 @@ body {
   }
 
   .icosahedron-wrap {
+    left: 0;
+    right: auto;
     width: 100%;
     max-width: none;
     height: 40vh;
