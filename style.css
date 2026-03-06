@@ -31,11 +31,14 @@ body {
   color: var(--text);
   line-height: 1.6;
   min-height: 100vh;
+  perspective: 1000px;
 }
 
 .app {
   display: flex;
   min-height: 100vh;
+  position: relative;
+  z-index: 1;
 }
 
 /* ----- Left sidebar ----- */
@@ -105,6 +108,34 @@ body {
   color: var(--text-muted);
   margin-top: 0.5rem;
   display: block;
+}
+
+/* Spinning orange sphere on the right */
+.sphere {
+  position: fixed;
+  right: 14%;
+  top: 50%;
+  width: 64px;
+  height: 64px;
+  margin-top: -32px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(255, 255, 255, 0.35),
+    var(--accent-orange) 40%,
+    rgba(180, 120, 20, 0.9)
+  );
+  box-shadow:
+    inset -6px -8px 14px rgba(0, 0, 0, 0.25),
+    inset 4px 4px 10px rgba(255, 255, 255, 0.15),
+    0 4px 20px rgba(0, 0, 0, 0.3);
+  animation: sphere-spin 4s linear infinite;
+  z-index: 0;
+}
+
+@keyframes sphere-spin {
+  from { transform: rotateY(0deg); }
+  to { transform: rotateY(360deg); }
 }
 
 /* ----- Right content ----- */
@@ -300,6 +331,11 @@ body {
 
   .content {
     padding: 1.5rem 1.25rem 2rem;
+  }
+
+  .sphere {
+    right: 50%;
+    margin-right: -32px;
   }
 
   .ascii-name {

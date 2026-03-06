@@ -25,8 +25,8 @@
         --quote-border: #388bfd;
       }
       * { box-sizing: border-box; }
-      body { margin: 0; font-family: 'JetBrains Mono', 'SF Mono', Consolas, monospace; background: var(--bg-content); color: var(--text); line-height: 1.6; min-height: 100vh; }
-      .app { display: flex; min-height: 100vh; }
+      body { margin: 0; font-family: 'JetBrains Mono', 'SF Mono', Consolas, monospace; background: var(--bg-content); color: var(--text); line-height: 1.6; min-height: 100vh; perspective: 1000px; }
+      .app { display: flex; min-height: 100vh; position: relative; z-index: 1; }
       .sidebar { width: 280px; min-width: 280px; background: var(--bg-sidebar); border-right: 1px solid var(--border); padding: 1.25rem 0; flex-shrink: 0; }
       .sidebar-section { padding: 0 1rem 1.25rem; }
       .sidebar-title { font-size: 0.85rem; font-weight: 500; color: var(--text); margin: 0 0 0.35rem 0; }
@@ -57,11 +57,14 @@
       .content-section ul li { margin-bottom: 0.5rem; }
       .content-section .skills-detail { list-style: none; padding-left: 0; }
       .pagination { font-size: 0.7rem; color: var(--text-muted); margin-top: 0.5rem; display: block; }
-      @media (max-width: 768px) { .app { flex-direction: column; } .sidebar { width: 100%; min-width: 100%; border-right: none; border-bottom: 1px solid var(--border); } .content { padding: 1.5rem 1.25rem 2rem; } }
+      .sphere { position: fixed; right: 14%; top: 50%; width: 64px; height: 64px; margin-top: -32px; border-radius: 50%; background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.35), var(--accent-orange) 40%, rgba(180,120,20,0.9)); box-shadow: inset -6px -8px 14px rgba(0,0,0,0.25), inset 4px 4px 10px rgba(255,255,255,0.15), 0 4px 20px rgba(0,0,0,0.3); animation: sphere-spin 4s linear infinite; z-index: 0; }
+      @keyframes sphere-spin { from { transform: rotateY(0deg); } to { transform: rotateY(360deg); } }
+      @media (max-width: 768px) { .app { flex-direction: column; } .sidebar { width: 100%; min-width: 100%; border-right: none; border-bottom: 1px solid var(--border); } .content { padding: 1.5rem 1.25rem 2rem; } .sphere { right: 50%; margin-right: -32px; } }
     </style>
 </head>
 
 <body>
+    <div class="sphere" aria-hidden="true"></div>
     <div class="app">
         <!-- Left pane: Navigation & summary -->
         <aside class="sidebar">
