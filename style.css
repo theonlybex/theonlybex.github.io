@@ -110,32 +110,25 @@ body {
   display: block;
 }
 
-/* Spinning orange sphere on the right */
-.sphere {
+/* 3D wireframe icosahedron on the right */
+.icosahedron-wrap {
   position: fixed;
-  right: 14%;
-  top: 50%;
-  width: 64px;
-  height: 64px;
-  margin-top: -32px;
-  border-radius: 50%;
-  background: radial-gradient(
-    circle at 30% 30%,
-    rgba(255, 255, 255, 0.35),
-    var(--accent-orange) 40%,
-    rgba(180, 120, 20, 0.9)
-  );
-  box-shadow:
-    inset -6px -8px 14px rgba(0, 0, 0, 0.25),
-    inset 4px 4px 10px rgba(255, 255, 255, 0.15),
-    0 4px 20px rgba(0, 0, 0, 0.3);
-  animation: sphere-spin 4s linear infinite;
+  top: 0;
+  right: 0;
+  width: 42%;
+  max-width: 520px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   z-index: 0;
+  pointer-events: none;
 }
 
-@keyframes sphere-spin {
-  from { transform: rotateY(0deg); }
-  to { transform: rotateY(360deg); }
+#icosahedron {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 /* ----- Right content ----- */
@@ -333,9 +326,11 @@ body {
     padding: 1.5rem 1.25rem 2rem;
   }
 
-  .sphere {
-    right: 50%;
-    margin-right: -32px;
+  .icosahedron-wrap {
+    width: 100%;
+    max-width: none;
+    height: 40vh;
+    min-height: 240px;
   }
 
   .ascii-name {
