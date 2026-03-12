@@ -8,66 +8,13 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
     <script src="./main.js" defer></script>
-    <!-- Critical CSS fallback so layout works even if style.css fails to load -->
-    <style>
-      :root {
-        --bg-dark: #0f1419;
-        --bg-sidebar: #151b23;
-        --bg-content: #0f1419;
-        --text: #e6edf3;
-        --text-muted: #8b949e;
-        --accent-orange: #d29922;
-        --accent-blue: #58a6ff;
-        --accent-purple: #a371f7;
-        --border: #21262d;
-        --quote-border: #388bfd;
-      }
-      * { box-sizing: border-box; }
-      body { margin: 0; font-family: 'JetBrains Mono', 'SF Mono', Consolas, monospace; background: var(--bg-content); color: var(--text); line-height: 1.6; min-height: 100vh; perspective: 1000px; }
-      .app { display: flex; min-height: 100vh; position: relative; z-index: 1; }
-      .sidebar { width: 280px; min-width: 280px; background: var(--bg-sidebar); border-right: 1px solid var(--border); padding: 1.25rem 0; flex-shrink: 0; }
-      .sidebar-section { padding: 0 1rem 1.25rem; }
-      .sidebar-title { font-size: 0.85rem; font-weight: 500; color: var(--text); margin: 0 0 0.35rem 0; }
-      .sidebar-sep { height: 1px; background: var(--border); margin-bottom: 0.75rem; }
-      .sidebar-list { list-style: none; margin: 0; padding: 0; }
-      .sidebar-item { font-size: 0.8rem; padding: 0.35rem 0; cursor: pointer; color: var(--text-muted); display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.25rem; }
-      .sidebar-item:hover { color: var(--text); }
-      .sidebar-item.active { color: var(--accent-orange); }
-      .sidebar-item .company { color: var(--accent-orange); }
-      .content { flex: 1; padding: 2rem 2.5rem 3rem; overflow-y: auto; max-width: 720px; }
-      .content-header { margin-bottom: 1.5rem; }
-      .ascii-name { font-size: clamp(0.65rem, 1.8vw, 0.9rem); line-height: 1.2; margin: 0 0 0.5rem 0; color: var(--text); }
-      .full-name { font-size: 1rem; font-weight: 500; color: var(--text); margin: 0; }
-      .content-section { display: none; }
-      .content-section.active { display: block; }
-      .content-section p { margin: 0 0 1rem 0; font-size: 0.9rem; color: var(--text); }
-      .content-section .accent { color: var(--accent-orange); }
-      .content-section .links a { color: var(--accent-blue); text-decoration: none; }
-      .content-section .resume-link { color: var(--accent-purple) !important; }
-      .content-section .link-style { color: var(--accent-blue); }
-      .quote { border: 1px solid var(--quote-border); border-bottom: none; border-right: none; padding: 1rem 1.25rem; margin: 0; background: rgba(56,139,253,0.06); }
-      .quote p { margin: 0 0 0.5rem 1.5rem; font-size: 0.9rem; font-style: italic; }
-      .quote cite { display: block; font-size: 0.8rem; color: var(--quote-border); font-style: normal; margin-left: 1.5rem; }
-      .content-section h2 { font-size: 1rem; font-weight: 600; margin: 0 0 0.35rem 0; color: var(--text); }
-      .content-section h2 .company { color: var(--accent-orange); }
-      .content-section .meta { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1rem !important; }
-      .content-section ul { margin: 0 0 1rem 0; padding-left: 1.25rem; font-size: 0.88rem; color: var(--text); }
-      .content-section ul li { margin-bottom: 0.5rem; }
-      .content-section .skills-detail { list-style: none; padding-left: 0; }
-      .pagination { font-size: 0.7rem; color: var(--text-muted); margin-top: 0.5rem; display: block; }
-      .icosahedron-wrap { position: fixed; top: 0; left: 1000px; right: 0; height: 100vh; display: flex; align-items: center; justify-content: center; z-index: 0; pointer-events: none; }
-      .app > .content { position: relative; z-index: 1; }
-      .app > .sidebar { position: relative; z-index: 1; }
-      #icosahedron { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
-      @media (max-width: 768px) { .app { flex-direction: column; } .sidebar { width: 100%; min-width: 100%; border-right: none; border-bottom: 1px solid var(--border); } .content { padding: 1.5rem 1.25rem 2rem; } .icosahedron-wrap { left: 0; right: auto; width: 100%; max-width: none; height: 40vh; min-height: 240px; } }
-    </style>
 </head>
 
 <body>
     <div class="app">
-        <!-- Left pane: Navigation & summary -->
+        <!-- Left pane: Navigation -->
         <aside class="sidebar">
             <div class="sidebar-section">
                 <h2 class="sidebar-title">About</h2>
@@ -76,10 +23,11 @@
                     <li class="sidebar-item" data-id="about">Intro</li>
                 </ul>
             </div>
+
             <div class="sidebar-section">
                 <h2 class="sidebar-title">Experience</h2>
                 <div class="sidebar-sep"></div>
-                <ul class="sidebar-list" data-section="experience">
+                <ul class="sidebar-list">
                     <li class="sidebar-item" data-id="wondish">
                         <span class="role">Applied AI Engineer</span>
                         <span class="company">@ Wondish</span>
@@ -93,62 +41,49 @@
                         <span class="company">@ Halyk Bank</span>
                     </li>
                 </ul>
-                <span class="pagination">1 of 3</span>
             </div>
 
             <div class="sidebar-section">
-                <h2 class="sidebar-title">Projects-</h2>
+                <h2 class="sidebar-title">Projects</h2>
                 <div class="sidebar-sep"></div>
-                <ul class="sidebar-list" data-section="projects">
+                <ul class="sidebar-list">
                     <li class="sidebar-item" data-id="evee">Evee</li>
                     <li class="sidebar-item" data-id="tigercat">Tigercat</li>
                     <li class="sidebar-item" data-id="vocalai">VocalAI</li>
                 </ul>
-                <span class="pagination">1 of 3</span>
             </div>
 
             <div class="sidebar-section">
-                <h2 class="sidebar-title">Skills - Tools</h2>
+                <h2 class="sidebar-title">Skills &amp; Tools</h2>
                 <div class="sidebar-sep"></div>
-                <ul class="sidebar-list skills-list" data-section="skills">
-                    <li class="sidebar-item" data-id="skills-detail">Python</li>
-                    <li class="sidebar-item" data-id="skills-detail">TypeScript</li>
-                    <li class="sidebar-item" data-id="skills-detail">JavaScript</li>
-                    <li class="sidebar-item" data-id="skills-detail">Next.js</li>
-                    <li class="sidebar-item" data-id="skills-detail">React</li>
-                    <li class="sidebar-item" data-id="skills-detail">Node.js</li>
-                    <li class="sidebar-item" data-id="skills-detail">SQL</li>
-                    <li class="sidebar-item" data-id="skills-detail">Git</li>
-                    <li class="sidebar-item" data-id="skills-detail">LangChain</li>
-                    <li class="sidebar-item" data-id="skills-detail">OpenAI API</li>
+                <ul class="sidebar-list">
+                    <li class="sidebar-item" data-id="skills-detail">Overview</li>
                 </ul>
-                <span class="pagination">1 of 2</span>
             </div>
         </aside>
 
-        <!-- Right pane: Main content -->
+        <!-- Right pane: Content -->
         <main class="content">
             <header class="content-header">
                 <pre class="ascii-name" aria-hidden="true">
- ___  _____ _  __ ___ _   _ 
+ ___  _____ _  __ ___ _   _
 | _ )|_   _| |/ /|_ _| | | |
 | _ \  | | | ' &lt;  | || |_| |
-|___/  |_| |_|\_\|___|\___/ 
-                </pre>
+|___/  |_| |_|\_\|___|\___/ </pre>
                 <p class="full-name">Bekzhan Abdimanapov</p>
             </header>
 
-            <!-- About (default view) -->
-            <section id="about" class="content-section active">
+            <!-- About -->
+            <section id="about" class="content-section">
                 <p class="intro">Hi, I'm <strong>Bekzhan Abdimanapov</strong>. A backend-focused software engineer and <span class="accent">AI/ML practitioner</span>.</p>
-                <p>I build production systems with <strong>Python</strong>, <strong>TypeScript</strong>, and modern AI tooling. I care about <span class="accent">clean APIs</span>, <strong>UX</strong>, and shipping things that work. MS in Computer Science (AI/ML) from University of the Pacific.</p>
-                <p class="links">
+                <p>I build production systems with <strong>Python</strong>, <strong>TypeScript</strong>, and modern AI tooling. I care about <span class="accent">clean APIs</span>, <strong>UX</strong>, and shipping things that work.</p>
+                <p class="meta-line">MS in Computer Science (AI/ML) · University of the Pacific</p>
+                <div class="links">
                     <a href="https://www.linkedin.com/in/bexs" target="_blank" rel="noopener">LinkedIn</a>
                     <a href="https://github.com/theonlybex" target="_blank" rel="noopener">GitHub</a>
-                    <a href="mailto:itsbebox@gmail.com" class="resume-link">resumé</a>
-                    <span class="sub">printable: <a href="#resume-pdf">PDF</a></span>
-                </p>
-                <p class="nav-hint"><span class="link-style">Click</span> on a section on the left to learn more. You can also use the <span class="link-style">arrow keys</span> or <span class="link-style">Vim motions</span> (j/k).</p>
+                    <a href="mailto:itsbebox@gmail.com" class="resume-link">Email / Resumé</a>
+                </div>
+                <p class="nav-hint"><span class="link-style">Click</span> a section on the left to explore. Use <span class="link-style">↑↓</span> or <span class="link-style">j/k</span> to navigate.</p>
                 <blockquote class="quote">
                     <span class="quote-icon" aria-hidden="true">"</span>
                     <p>You fear the sword, so the sword I will bring against you, declares the Sovereign Lord.</p>
@@ -156,73 +91,179 @@
                 </blockquote>
             </section>
 
-            <!-- Experience details -->
+            <!-- Experience: Wondish -->
             <section id="wondish" class="content-section">
-                <h2>Applied AI Engineer <span class="company">@ Wondish</span></h2>
-                <p class="meta">San Francisco, USA · Feb 2026 – Present</p>
+                <div class="section-header">
+                    <h2>Applied AI Engineer <span class="company">@ Wondish</span></h2>
+                    <p class="meta">San Francisco, USA &nbsp;·&nbsp; Feb 2026 – Present</p>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Ollama</span>
+                        <span class="tag">LLM Fine-tuning</span>
+                        <span class="tag">Production ML</span>
+                    </div>
+                </div>
+                <div class="section-divider"></div>
                 <ul>
                     <li>Fine-tuned an Ollama LLM on proprietary recipe data to deliver personalized dish recommendations, improving user engagement and customization accuracy.</li>
                     <li>Integrated and deployed the fine-tuned model into a production web application, enabling real-time inference and scalable user personalization.</li>
                 </ul>
             </section>
+
+            <!-- Experience: Leechy -->
             <section id="leechy" class="content-section">
-                <h2>AI Software Engineer <span class="company">@ Leechy LLC</span></h2>
-                <p class="meta">San Jose, USA · Aug 2025 – Jan 2026</p>
+                <div class="section-header">
+                    <h2>AI Software Engineer <span class="company">@ Leechy LLC</span></h2>
+                    <p class="meta">San Jose, USA &nbsp;·&nbsp; Aug 2025 – Jan 2026</p>
+                    <div class="tags">
+                        <span class="tag">TypeScript</span>
+                        <span class="tag">Next.js</span>
+                        <span class="tag">Supabase</span>
+                        <span class="tag">OpenAI API</span>
+                        <span class="tag">LangChain</span>
+                        <span class="tag">RAG</span>
+                        <span class="tag">Redis</span>
+                    </div>
+                </div>
+                <div class="section-divider"></div>
                 <ul>
-                    <li>Rebuilt company website with TypeScript, Next.js, Supabase, improving usability and backend integration.</li>
-                    <li>Developed an AI support assistant using OpenAI API, LangChain (RAG with Pinecone), and Redis, enhancing navigation and adding autofill feature.</li>
-                </ul>
-            </section>
-            <section id="halyk" class="content-section">
-                <h2>Software Engineer <span class="company">@ Halyk Bank</span></h2>
-                <p class="meta">Almaty, KZ · Oct 2023 – Jan 2024</p>
-                <ul>
-                    <li>Designed and deployed production-level Python RPA bots to automate core banking workflows, reducing team manual workload by 2+ hours daily.</li>
-                    <li>Optimized SQL queries (10M+ records) on MS SQL Server, cutting execution time and improving analytics.</li>
+                    <li>Rebuilt company website with TypeScript, Next.js, and Supabase, improving usability and backend integration.</li>
+                    <li>Developed an AI support assistant using OpenAI API, LangChain (RAG with Pinecone), and Redis — adding autofill and contextual navigation.</li>
                 </ul>
             </section>
 
-            <!-- Project details -->
-            <section id="evee" class="content-section">
-                <h2>Evee</h2>
-                <p class="meta">Python, whisper.cpp, Mistral 3 B Instruct · Dec 2024 – Present</p>
+            <!-- Experience: Halyk Bank -->
+            <section id="halyk" class="content-section">
+                <div class="section-header">
+                    <h2>Software Engineer <span class="company">@ Halyk Bank</span></h2>
+                    <p class="meta">Almaty, KZ &nbsp;·&nbsp; Oct 2023 – Jan 2024</p>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">RPA</span>
+                        <span class="tag">SQL</span>
+                        <span class="tag">MS SQL Server</span>
+                    </div>
+                </div>
+                <div class="section-divider"></div>
                 <ul>
-                    <li>Built a Python voice assistant using whisper.cpp and Mistral 3 B Instruct, automating daily Windows tasks through voice commands.</li>
+                    <li>Designed and deployed production-level Python RPA bots to automate core banking workflows, reducing manual workload by 2+ hours daily.</li>
+                    <li>Optimized SQL queries across 10M+ records on MS SQL Server, cutting execution time and improving analytics throughput.</li>
+                </ul>
+            </section>
+
+            <!-- Project: Evee -->
+            <section id="evee" class="content-section">
+                <div class="section-header">
+                    <h2>Evee</h2>
+                    <p class="meta">Dec 2024 – Present</p>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">whisper.cpp</span>
+                        <span class="tag">Mistral 3B</span>
+                        <span class="tag">Selenium</span>
+                        <span class="tag">PyAutoGUI</span>
+                    </div>
+                </div>
+                <div class="section-divider"></div>
+                <ul>
+                    <li>Built a Python voice assistant using whisper.cpp and Mistral 3B Instruct, automating daily Windows tasks through voice commands.</li>
                     <li>Added Chrome automation with Selenium and PyAutoGUI, expanding automatable workflows and increasing task coverage.</li>
                 </ul>
             </section>
+
+            <!-- Project: Tigercat -->
             <section id="tigercat" class="content-section">
-                <h2>Tigercat</h2>
-                <p class="meta">JavaScript, Canvas LMS REST API · Jun 2025 – Present</p>
+                <div class="section-header">
+                    <h2>Tigercat</h2>
+                    <p class="meta">Jun 2025 – Present</p>
+                    <div class="tags">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Chrome Extension</span>
+                        <span class="tag">Canvas LMS API</span>
+                    </div>
+                </div>
+                <div class="section-divider"></div>
                 <ul>
-                    <li>Developed a Chrome Extension AI agent using JavaScript and the Canvas API, automating course files navigation.</li>
+                    <li>Developed a Chrome Extension AI agent using JavaScript and the Canvas API, automating course file navigation.</li>
                     <li>Added logic for the agent to analyze and read course data, enabling in-browser tutoring and contextual assistance.</li>
                 </ul>
             </section>
+
+            <!-- Project: VocalAI -->
             <section id="vocalai" class="content-section">
-                <h2>VocalAI</h2>
-                <p class="meta">TypeScript, Python, Vapi agents · Jun 2025</p>
+                <div class="section-header">
+                    <h2>VocalAI</h2>
+                    <p class="meta">Jun 2025 &nbsp;·&nbsp; Berkeley Hackathon 2025</p>
+                    <div class="tags">
+                        <span class="tag">TypeScript</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">Vapi</span>
+                        <span class="tag award-tag">1st Place · Vapi-Sponsored</span>
+                    </div>
+                </div>
+                <div class="section-divider"></div>
                 <ul>
-                    <li>Trained voice agent (Vapi model) during a 48-hour hackathon, enabling a production-ready AI signing tutor.</li>
-                    <li>Built the first AI-powered singing voice system—impressed 14 judges and won <strong>1st Place</strong> (Vapi-sponsored) at the 2025 Berkeley Hackathon.</li>
+                    <li>Trained a Vapi voice agent during a 48-hour hackathon, enabling a production-ready AI singing tutor.</li>
+                    <li>Built the first AI-powered singing voice coaching system — impressed 14 judges and won <strong>1st Place</strong> at the 2025 Berkeley Hackathon.</li>
                 </ul>
             </section>
 
-            <!-- Skills detail -->
+            <!-- Skills -->
             <section id="skills-detail" class="content-section">
-                <h2>Skills & Tools</h2>
-                <p>Languages, frameworks, and tools I use day to day:</p>
-                <ul class="skills-detail">
-                    <li><span class="accent">Python</span> · TypeScript · JavaScript · SQL</li>
-                    <li><span class="accent">Next.js</span> · React · Node.js</li>
-                    <li>OpenAI API · LangChain · RAG (Pinecone) · Redis</li>
-                    <li>Git · Supabase · MS SQL Server · whisper.cpp</li>
-                </ul>
-                <p class="awards">
-                    <strong>Awards</strong> — Google Developers Student Club (Co-developer). 1st Place CalHacks 2025 (Vapi-sponsored, VocalAI). Represented University of the Pacific at CalHacks 2024.
+                <h2>Skills &amp; Tools</h2>
+                <div class="section-divider"></div>
+
+                <div class="skills-group">
+                    <p class="skills-label">Languages</p>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">TypeScript</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">SQL</span>
+                    </div>
+                </div>
+
+                <div class="skills-group">
+                    <p class="skills-label">Frameworks &amp; Libraries</p>
+                    <div class="tags">
+                        <span class="tag">Next.js</span>
+                        <span class="tag">React</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">LangChain</span>
+                    </div>
+                </div>
+
+                <div class="skills-group">
+                    <p class="skills-label">AI &amp; ML</p>
+                    <div class="tags">
+                        <span class="tag">OpenAI API</span>
+                        <span class="tag">RAG · Pinecone</span>
+                        <span class="tag">whisper.cpp</span>
+                        <span class="tag">Vapi</span>
+                        <span class="tag">Ollama</span>
+                    </div>
+                </div>
+
+                <div class="skills-group">
+                    <p class="skills-label">Infrastructure &amp; Tools</p>
+                    <div class="tags">
+                        <span class="tag">Supabase</span>
+                        <span class="tag">Redis</span>
+                        <span class="tag">MS SQL Server</span>
+                        <span class="tag">Git</span>
+                    </div>
+                </div>
+
+                <div class="section-divider"></div>
+                <p class="awards-block">
+                    <span class="awards-label">Awards</span>
+                    Co-developer, Google Developers Student Club.
+                    1st Place CalHacks 2025 (Vapi-sponsored, VocalAI).
+                    Represented University of the Pacific at CalHacks 2024.
                 </p>
             </section>
         </main>
+
         <div class="icosahedron-wrap" aria-hidden="true">
             <canvas id="icosahedron" width="400" height="400"></canvas>
         </div>

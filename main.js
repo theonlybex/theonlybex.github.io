@@ -11,7 +11,14 @@ document.addEventListener('DOMContentLoaded', () => {
     currentIndex = idx;
 
     contentSections.forEach(section => {
-      section.classList.toggle('active', section.id === id);
+      if (section.id === id) {
+        // Remove and re-add to restart the slide-in animation every time
+        section.classList.remove('active');
+        void section.offsetWidth; // force reflow
+        section.classList.add('active');
+      } else {
+        section.classList.remove('active');
+      }
     });
 
     sidebarItems.forEach(item => {

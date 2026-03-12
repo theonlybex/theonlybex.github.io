@@ -2,7 +2,7 @@
 
 :root {
   --bg-dark: #0f1419;
-  --bg-sidebar: #151b23;
+  --bg-sidebar: #111820;
   --bg-content: #0f1419;
   --text: #e6edf3;
   --text-muted: #8b949e;
@@ -31,7 +31,6 @@ body {
   color: var(--text);
   line-height: 1.6;
   min-height: 100vh;
-  perspective: 1000px;
 }
 
 .app {
@@ -47,22 +46,23 @@ body {
   min-width: 280px;
   background: var(--bg-sidebar);
   border-right: 1px solid var(--border);
-  padding: 1.25rem 0;
+  padding: 1.5rem 0;
   flex-shrink: 0;
   position: relative;
   z-index: 1;
 }
 
 .sidebar-section {
-  padding: 0 1rem 1.25rem;
+  padding: 0 1rem 1.5rem;
 }
 
 .sidebar-title {
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: var(--text);
-  margin: 0 0 0.35rem 0;
-  letter-spacing: 0.02em;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin: 0 0 0.4rem 0;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
 .sidebar-sep {
@@ -79,25 +79,36 @@ body {
 
 .sidebar-item {
   font-size: 0.8rem;
-  padding: 0.35rem 0;
+  padding: 0.4rem 0.6rem;
+  margin: 0 -0.6rem;
   cursor: pointer;
   color: var(--text-muted);
-  transition: color 0.15s ease;
+  transition: color 0.15s ease, background 0.15s ease, border-color 0.15s ease;
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
   gap: 0.25rem;
+  border-left: 2px solid transparent;
+  border-radius: 0 2px 2px 0;
 }
 
 .sidebar-item:hover {
   color: var(--text);
+  background: rgba(255, 255, 255, 0.03);
 }
 
 .sidebar-item.active {
   color: var(--accent-orange);
+  border-left-color: var(--accent-orange);
+  background: rgba(210, 153, 34, 0.05);
 }
 
 .sidebar-item .company {
+  color: var(--accent-orange);
+  font-size: 0.75rem;
+}
+
+.sidebar-item.active .company {
   color: var(--accent-orange);
 }
 
@@ -105,14 +116,7 @@ body {
   color: inherit;
 }
 
-.pagination {
-  font-size: 0.7rem;
-  color: var(--text-muted);
-  margin-top: 0.5rem;
-  display: block;
-}
-
-/* 3D wireframe icosahedron on the right */
+/* 3D wireframe icosahedron */
 .icosahedron-wrap {
   position: fixed;
   top: 0;
@@ -145,84 +149,133 @@ body {
 }
 
 .content-header {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border);
 }
 
 .ascii-name {
   font-family: 'JetBrains Mono', monospace;
-  font-size: clamp(0.65rem, 1.8vw, 0.9rem);
-  line-height: 1.2;
+  font-size: clamp(0.6rem, 1.6vw, 0.85rem);
+  line-height: 1.25;
   margin: 0 0 0.5rem 0;
-  color: var(--text);
+  color: var(--accent-orange);
   letter-spacing: 0.02em;
+  opacity: 0.85;
 }
 
 .full-name {
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 500;
-  color: var(--text);
+  color: var(--text-muted);
   margin: 0;
+  letter-spacing: 0.02em;
 }
 
-/* Content sections: only one visible at a time */
+/* Content sections: slide-in from left */
 .content-section {
   display: none;
 }
 
 .content-section.active {
   display: block;
-  animation: fadeIn 0.25s ease;
+  animation: slideInLeft 0.28s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
+/* ----- Section header & tags ----- */
+.section-header {
+  margin-bottom: 0.75rem;
+}
+
+.section-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 0.85rem 0 1.1rem;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.6rem;
+}
+
+.tag {
+  font-size: 0.68rem;
+  padding: 0.18rem 0.5rem;
+  background: rgba(210, 153, 34, 0.08);
+  border: 1px solid rgba(210, 153, 34, 0.25);
+  color: var(--accent-orange);
+  border-radius: 2px;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.tag.award-tag {
+  background: rgba(163, 113, 247, 0.08);
+  border-color: rgba(163, 113, 247, 0.3);
+  color: var(--accent-purple);
+}
+
+/* ----- Typography ----- */
 .content-section p {
-  margin: 0 0 1rem 0;
-  font-size: 0.9rem;
+  margin: 0 0 0.85rem 0;
+  font-size: 0.88rem;
   color: var(--text);
 }
 
 .content-section .intro {
   font-size: 0.95rem;
+  margin-bottom: 0.75rem;
 }
 
 .content-section .accent {
   color: var(--accent-orange);
 }
 
-.content-section .links {
+.meta-line {
+  font-size: 0.8rem !important;
+  color: var(--text-muted) !important;
+  margin-bottom: 1rem !important;
+}
+
+.links {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
-  gap: 0.5rem 1rem;
+  gap: 0.5rem 1.25rem;
   margin-bottom: 1.25rem;
 }
 
-.content-section .links a {
+.links a {
   color: var(--accent-blue);
   text-decoration: none;
+  font-size: 0.88rem;
 }
 
-.content-section .links a:hover {
+.links a:hover {
   text-decoration: underline;
 }
 
-.content-section .resume-link {
+.resume-link {
   color: var(--accent-purple) !important;
 }
 
-.content-section .sub {
-  font-size: 0.75rem;
+.nav-hint {
+  font-size: 0.8rem;
   color: var(--text-muted);
-}
-
-.content-section .nav-hint {
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem !important;
 }
 
 .link-style {
@@ -231,85 +284,107 @@ body {
 
 /* Quote block */
 .quote {
-  border: 1px solid var(--quote-border);
-  border-bottom: none;
-  border-right: none;
-  padding: 1rem 1.25rem;
+  border-left: 2px solid var(--quote-border);
+  padding: 0.75rem 1.25rem;
   margin: 0;
   position: relative;
-  background: rgba(56, 139, 253, 0.06);
+  background: rgba(56, 139, 253, 0.04);
 }
 
 .quote-icon {
   position: absolute;
-  top: 0.75rem;
-  left: 1rem;
-  font-size: 1.25rem;
+  top: 0.5rem;
+  left: 0.75rem;
+  font-size: 1.1rem;
   color: var(--quote-border);
-  opacity: 0.9;
+  opacity: 0.6;
 }
 
 .quote p {
-  margin: 0 0 0.5rem 1.5rem;
-  font-size: 0.9rem;
+  margin: 0 0 0.4rem 1.25rem !important;
+  font-size: 0.85rem !important;
   font-style: italic;
-  color: var(--text);
+  color: var(--text) !important;
 }
 
 .quote cite {
   display: block;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   color: var(--quote-border);
   font-style: normal;
-  margin-left: 1.5rem;
+  margin-left: 1.25rem;
+  opacity: 0.8;
 }
 
-/* Detail sections (experience, projects, skills) */
+/* Experience / Project sections */
 .content-section h2 {
   font-size: 1rem;
   font-weight: 600;
-  margin: 0 0 0.35rem 0;
+  margin: 0 0 0.25rem 0;
   color: var(--text);
 }
 
 .content-section h2 .company {
   color: var(--accent-orange);
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .content-section .meta {
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   color: var(--text-muted);
-  margin-bottom: 1rem !important;
+  margin: 0 !important;
 }
 
+/* Bullet list */
 .content-section ul {
-  margin: 0 0 1rem 0;
-  padding-left: 1.25rem;
-  font-size: 0.88rem;
+  margin: 0 0 0.5rem 0;
+  padding-left: 0;
+  list-style: none;
+  font-size: 0.87rem;
   color: var(--text);
 }
 
 .content-section ul li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.65rem;
+  padding-left: 1.25rem;
+  position: relative;
+  line-height: 1.6;
 }
 
-.content-section .skills-detail {
-  list-style: none;
-  padding-left: 0;
+.content-section ul li::before {
+  content: '▸';
+  color: var(--accent-orange);
+  position: absolute;
+  left: 0;
+  opacity: 0.7;
 }
 
-.content-section .skills-detail li {
-  margin-bottom: 0.4rem;
+/* Skills section */
+.skills-group {
+  margin-bottom: 1.1rem;
 }
 
-.content-section .awards {
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  margin-top: 1rem !important;
+.skills-label {
+  font-size: 0.7rem !important;
+  color: var(--text-muted) !important;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0 0 0.4rem 0 !important;
 }
 
-/* Responsive: stack sidebar above content on small screens */
+.awards-block {
+  font-size: 0.82rem !important;
+  color: var(--text-muted) !important;
+  line-height: 1.7;
+}
+
+.awards-label {
+  color: var(--accent-orange);
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
   .app {
     flex-direction: column;
@@ -341,6 +416,6 @@ body {
   }
 
   .ascii-name {
-    font-size: 0.7rem;
+    font-size: 0.62rem;
   }
 }
