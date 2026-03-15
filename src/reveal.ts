@@ -1,12 +1,12 @@
 export function initReveal(): void {
   document.querySelectorAll<HTMLElement>('.project-grid .reveal').forEach((el, i) => {
-    el.style.transitionDelay = `${i * 90}ms`;
+    el.style.transitionDelay = `${i * 50}ms`;
   });
   document.querySelectorAll<HTMLElement>('.skills-grid .reveal').forEach((el, i) => {
-    el.style.transitionDelay = `${i * 60}ms`;
+    el.style.transitionDelay = `${i * 35}ms`;
   });
   document.querySelectorAll<HTMLElement>('.exp-list .reveal').forEach((el, i) => {
-    el.style.transitionDelay = `${i * 80}ms`;
+    el.style.transitionDelay = `${i * 60}ms`;
   });
 
   const observer = new IntersectionObserver((entries) => {
