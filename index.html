@@ -2,272 +2,303 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bekzhan Abdimanapov | Portfolio</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-    <script src="./main.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bekzhan Abdimanapov | Portfolio</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script type="module" src="./src/main.ts"></script>
 </head>
 
 <body>
-    <div class="app">
-        <!-- Left pane: Navigation -->
-        <aside class="sidebar">
-            <div class="sidebar-section">
-                <h2 class="sidebar-title">About</h2>
-                <div class="sidebar-sep"></div>
-                <ul class="sidebar-list">
-                    <li class="sidebar-item" data-id="about">Intro</li>
-                </ul>
-            </div>
 
-            <div class="sidebar-section">
-                <h2 class="sidebar-title">Experience</h2>
-                <div class="sidebar-sep"></div>
-                <ul class="sidebar-list">
-                    <li class="sidebar-item" data-id="wondish">
-                        <span class="role">Applied AI Engineer</span>
-                        <span class="company">@ Wondish</span>
-                    </li>
-                    <li class="sidebar-item" data-id="leechy">
-                        <span class="role">AI Software Engineer</span>
-                        <span class="company">@ Leechy LLC</span>
-                    </li>
-                    <li class="sidebar-item" data-id="halyk">
-                        <span class="role">Software Engineer</span>
-                        <span class="company">@ Halyk Bank</span>
-                    </li>
-                </ul>
-            </div>
+  <!-- Custom cursor -->
+  <div id="cursor-dot"  aria-hidden="true"></div>
+  <div id="cursor-ring" aria-hidden="true"></div>
 
-            <div class="sidebar-section">
-                <h2 class="sidebar-title">Projects</h2>
-                <div class="sidebar-sep"></div>
-                <ul class="sidebar-list">
-                    <li class="sidebar-item" data-id="evee">Evee</li>
-                    <li class="sidebar-item" data-id="tigercat">Tigercat</li>
-                    <li class="sidebar-item" data-id="vocalai">VocalAI</li>
-                </ul>
-            </div>
+  <!-- Orb canvas background -->
+  <canvas id="orb-canvas" aria-hidden="true"></canvas>
 
-            <div class="sidebar-section">
-                <h2 class="sidebar-title">Skills &amp; Tools</h2>
-                <div class="sidebar-sep"></div>
-                <ul class="sidebar-list">
-                    <li class="sidebar-item" data-id="skills-detail">Overview</li>
-                </ul>
-            </div>
-        </aside>
-
-        <!-- Right pane: Content -->
-        <main class="content">
-            <header class="content-header">
-                <pre class="ascii-name" aria-hidden="true">
- ___  _____ _  __ ___ _   _
-| _ )|_   _| |/ /|_ _| | | |
-| _ \  | | | ' &lt;  | || |_| |
-|___/  |_| |_|\_\|___|\___/ </pre>
-                <p class="full-name">Bekzhan Abdimanapov</p>
-            </header>
-
-            <!-- About -->
-            <section id="about" class="content-section">
-                <p class="intro">Hi, I'm <strong>Bekzhan Abdimanapov</strong>. A backend-focused software engineer and <span class="accent">AI/ML practitioner</span>.</p>
-                <p>I build production systems with <strong>Python</strong>, <strong>TypeScript</strong>, and modern AI tooling. I care about <span class="accent">clean APIs</span>, <strong>UX</strong>, and shipping things that work.</p>
-                <p class="meta-line">MS in Computer Science (AI/ML) · University of the Pacific</p>
-                <div class="links">
-                    <a href="https://www.linkedin.com/in/bexs" target="_blank" rel="noopener">LinkedIn</a>
-                    <a href="https://github.com/theonlybex" target="_blank" rel="noopener">GitHub</a>
-                    <a href="mailto:itsbebox@gmail.com" class="resume-link">Email / Resumé</a>
-                </div>
-                <p class="nav-hint"><span class="link-style">Click</span> a section on the left to explore. Use <span class="link-style">↑↓</span> or <span class="link-style">j/k</span> to navigate.</p>
-                <blockquote class="quote">
-                    <span class="quote-icon" aria-hidden="true">"</span>
-                    <p>You fear the sword, so the sword I will bring against you, declares the Sovereign Lord.</p>
-                    <cite>Ezekiel 11:8</cite>
-                </blockquote>
-            </section>
-
-            <!-- Experience: Wondish -->
-            <section id="wondish" class="content-section">
-                <div class="section-header">
-                    <h2>Applied AI Engineer <span class="company">@ Wondish</span></h2>
-                    <p class="meta">San Francisco, USA &nbsp;·&nbsp; Feb 2026 – Present</p>
-                    <div class="tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">Ollama</span>
-                        <span class="tag">LLM Fine-tuning</span>
-                        <span class="tag">Production ML</span>
-                    </div>
-                </div>
-                <div class="section-divider"></div>
-                <ul>
-                    <li>Fine-tuned an Ollama LLM on proprietary recipe data to deliver personalized dish recommendations, improving user engagement and customization accuracy.</li>
-                    <li>Integrated and deployed the fine-tuned model into a production web application, enabling real-time inference and scalable user personalization.</li>
-                </ul>
-            </section>
-
-            <!-- Experience: Leechy -->
-            <section id="leechy" class="content-section">
-                <div class="section-header">
-                    <h2>AI Software Engineer <span class="company">@ Leechy LLC</span></h2>
-                    <p class="meta">San Jose, USA &nbsp;·&nbsp; Aug 2025 – Jan 2026</p>
-                    <div class="tags">
-                        <span class="tag">TypeScript</span>
-                        <span class="tag">Next.js</span>
-                        <span class="tag">Supabase</span>
-                        <span class="tag">OpenAI API</span>
-                        <span class="tag">LangChain</span>
-                        <span class="tag">RAG</span>
-                        <span class="tag">Redis</span>
-                    </div>
-                </div>
-                <div class="section-divider"></div>
-                <ul>
-                    <li>Rebuilt company website with TypeScript, Next.js, and Supabase, improving usability and backend integration.</li>
-                    <li>Developed an AI support assistant using OpenAI API, LangChain (RAG with Pinecone), and Redis — adding autofill and contextual navigation.</li>
-                </ul>
-            </section>
-
-            <!-- Experience: Halyk Bank -->
-            <section id="halyk" class="content-section">
-                <div class="section-header">
-                    <h2>Software Engineer <span class="company">@ Halyk Bank</span></h2>
-                    <p class="meta">Almaty, KZ &nbsp;·&nbsp; Oct 2023 – Jan 2024</p>
-                    <div class="tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">RPA</span>
-                        <span class="tag">SQL</span>
-                        <span class="tag">MS SQL Server</span>
-                    </div>
-                </div>
-                <div class="section-divider"></div>
-                <ul>
-                    <li>Designed and deployed production-level Python RPA bots to automate core banking workflows, reducing manual workload by 2+ hours daily.</li>
-                    <li>Optimized SQL queries across 10M+ records on MS SQL Server, cutting execution time and improving analytics throughput.</li>
-                </ul>
-            </section>
-
-            <!-- Project: Evee -->
-            <section id="evee" class="content-section">
-                <div class="section-header">
-                    <h2>Evee</h2>
-                    <p class="meta">Dec 2024 – Present</p>
-                    <div class="tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">whisper.cpp</span>
-                        <span class="tag">Mistral 3B</span>
-                        <span class="tag">Selenium</span>
-                        <span class="tag">PyAutoGUI</span>
-                    </div>
-                </div>
-                <div class="section-divider"></div>
-                <ul>
-                    <li>Built a Python voice assistant using whisper.cpp and Mistral 3B Instruct, automating daily Windows tasks through voice commands.</li>
-                    <li>Added Chrome automation with Selenium and PyAutoGUI, expanding automatable workflows and increasing task coverage.</li>
-                </ul>
-            </section>
-
-            <!-- Project: Tigercat -->
-            <section id="tigercat" class="content-section">
-                <div class="section-header">
-                    <h2>Tigercat</h2>
-                    <p class="meta">Jun 2025 – Present</p>
-                    <div class="tags">
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">Chrome Extension</span>
-                        <span class="tag">Canvas LMS API</span>
-                    </div>
-                </div>
-                <div class="section-divider"></div>
-                <ul>
-                    <li>Developed a Chrome Extension AI agent using JavaScript and the Canvas API, automating course file navigation.</li>
-                    <li>Added logic for the agent to analyze and read course data, enabling in-browser tutoring and contextual assistance.</li>
-                </ul>
-            </section>
-
-            <!-- Project: VocalAI -->
-            <section id="vocalai" class="content-section">
-                <div class="section-header">
-                    <h2>VocalAI</h2>
-                    <p class="meta">Jun 2025 &nbsp;·&nbsp; Berkeley Hackathon 2025</p>
-                    <div class="tags">
-                        <span class="tag">TypeScript</span>
-                        <span class="tag">Python</span>
-                        <span class="tag">Vapi</span>
-                        <span class="tag award-tag">1st Place · Vapi-Sponsored</span>
-                    </div>
-                </div>
-                <div class="section-divider"></div>
-                <ul>
-                    <li>Trained a Vapi voice agent during a 48-hour hackathon, enabling a production-ready AI singing tutor.</li>
-                    <li>Built the first AI-powered singing voice coaching system — impressed 14 judges and won <strong>1st Place</strong> at the 2025 Berkeley Hackathon.</li>
-                </ul>
-            </section>
-
-            <!-- Skills -->
-            <section id="skills-detail" class="content-section">
-                <h2>Skills &amp; Tools</h2>
-                <div class="section-divider"></div>
-
-                <div class="skills-group">
-                    <p class="skills-label">Languages</p>
-                    <div class="tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">TypeScript</span>
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">SQL</span>
-                    </div>
-                </div>
-
-                <div class="skills-group">
-                    <p class="skills-label">Frameworks &amp; Libraries</p>
-                    <div class="tags">
-                        <span class="tag">Next.js</span>
-                        <span class="tag">React</span>
-                        <span class="tag">Node.js</span>
-                        <span class="tag">LangChain</span>
-                    </div>
-                </div>
-
-                <div class="skills-group">
-                    <p class="skills-label">AI &amp; ML</p>
-                    <div class="tags">
-                        <span class="tag">OpenAI API</span>
-                        <span class="tag">RAG · Pinecone</span>
-                        <span class="tag">whisper.cpp</span>
-                        <span class="tag">Vapi</span>
-                        <span class="tag">Ollama</span>
-                    </div>
-                </div>
-
-                <div class="skills-group">
-                    <p class="skills-label">Infrastructure &amp; Tools</p>
-                    <div class="tags">
-                        <span class="tag">Supabase</span>
-                        <span class="tag">Redis</span>
-                        <span class="tag">MS SQL Server</span>
-                        <span class="tag">Git</span>
-                    </div>
-                </div>
-
-                <div class="section-divider"></div>
-                <p class="awards-block">
-                    <span class="awards-label">Awards</span>
-                    Co-developer, Google Developers Student Club.
-                    1st Place CalHacks 2025 (Vapi-sponsored, VocalAI).
-                    Represented University of the Pacific at CalHacks 2024.
-                </p>
-            </section>
-        </main>
-
-        <div class="icosahedron-wrap" aria-hidden="true">
-            <canvas id="icosahedron" width="400" height="400"></canvas>
-        </div>
+  <!-- Nav -->
+  <nav id="top-nav">
+    <div class="nav-inner">
+      <a class="nav-logo" href="#">Bex</a>
+      <div class="nav-links">
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme"></button>
+        <a href="https://www.linkedin.com/in/bexs" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/theonlybex" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:itsbebox@gmail.com">Email</a>
+        <a href="#" class="nav-resume">Resume</a>
+      </div>
     </div>
-</body>
+  </nav>
 
+  <main>
+
+    <!-- Hero -->
+    <section id="hero">
+      <div class="hero-inner">
+        <div class="status-badge">
+          <span class="status-dot-green"></span>
+          Available for new opportunities
+        </div>
+        <p class="hero-location">San Francisco, CA</p>
+        <h1 class="hero-name">Bekzhan<br>Abdimanapov</h1>
+        <p class="hero-role">Backend Engineer &nbsp;&middot;&nbsp; AI/ML Practitioner</p>
+        <p class="hero-edu">MS Computer Science (AI/ML) &nbsp;&middot;&nbsp; University of the Pacific</p>
+        <div class="hero-ctas">
+          <a href="#projects" class="btn btn-primary">View Work</a>
+          <a href="#about" class="btn btn-outline">About Me</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="content-section">
+      <div class="section-inner">
+        <p class="section-label">About</p>
+        <h2 class="section-title">Who I am</h2>
+        <p class="about-body">I'm a backend-focused software engineer and AI/ML practitioner. I build production systems with <strong>Python</strong>, <strong>TypeScript</strong>, and modern AI tooling. I care about clean APIs, great UX, and shipping things that actually work.</p>
+        <blockquote class="quote reveal">
+          <p>You fear the sword, so the sword I will bring against you, declares the Sovereign Lord.</p>
+          <cite>Ezekiel 11:8</cite>
+        </blockquote>
+        <div id="gh-stats" class="gh-stats-row reveal" hidden></div>
+        <div id="gh-repos" class="gh-repos-row reveal" hidden></div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="content-section section-surface">
+      <div class="section-inner">
+        <p class="section-label">Experience</p>
+        <h2 class="section-title">Where I've worked</h2>
+        <div class="exp-list">
+
+          <article class="exp-card exp-card--blue reveal">
+            <div class="exp-header">
+              <div>
+                <h3 class="exp-role">Applied AI Engineer</h3>
+                <p class="exp-company">Wondish</p>
+              </div>
+              <p class="exp-meta">San Francisco, USA &nbsp;&middot;&nbsp; Feb 2026 &ndash; Present</p>
+            </div>
+            <ul class="exp-bullets">
+              <li>Fine-tuned an Ollama LLM on proprietary recipe data to deliver personalized dish recommendations, improving user engagement and customization accuracy.</li>
+              <li>Integrated and deployed the fine-tuned model into a production web application, enabling real-time inference and scalable user personalization.</li>
+            </ul>
+            <div class="tags">
+              <span class="tag tag-lang">Python</span>
+              <span class="tag tag-ai">Ollama</span>
+              <span class="tag tag-ai">LLM Fine-tuning</span>
+              <span class="tag tag-ai">Production ML</span>
+            </div>
+          </article>
+
+          <article class="exp-card exp-card--red reveal">
+            <div class="exp-header">
+              <div>
+                <h3 class="exp-role">AI Software Engineer</h3>
+                <p class="exp-company exp-company--red">Leechy LLC</p>
+              </div>
+              <p class="exp-meta">San Jose, USA &nbsp;&middot;&nbsp; Aug 2025 &ndash; Jan 2026</p>
+            </div>
+            <ul class="exp-bullets">
+              <li>Rebuilt company website with TypeScript, Next.js, and Supabase, improving usability and backend integration.</li>
+              <li>Developed an AI support assistant using OpenAI API, LangChain (RAG with Pinecone), and Redis &mdash; adding autofill and contextual navigation.</li>
+            </ul>
+            <div class="tags">
+              <span class="tag tag-lang">TypeScript</span>
+              <span class="tag tag-framework">Next.js</span>
+              <span class="tag tag-tool">Supabase</span>
+              <span class="tag tag-ai">OpenAI API</span>
+              <span class="tag tag-framework">LangChain</span>
+              <span class="tag tag-ai">RAG</span>
+              <span class="tag tag-tool">Redis</span>
+            </div>
+          </article>
+
+          <article class="exp-card exp-card--amber reveal">
+            <div class="exp-header">
+              <div>
+                <h3 class="exp-role">Software Engineer</h3>
+                <p class="exp-company exp-company--amber">Halyk Bank</p>
+              </div>
+              <p class="exp-meta">Almaty, KZ &nbsp;&middot;&nbsp; Oct 2023 &ndash; Jan 2024</p>
+            </div>
+            <ul class="exp-bullets">
+              <li>Designed and deployed production-level Python RPA bots to automate core banking workflows, reducing manual workload by 2+ hours daily.</li>
+              <li>Optimized SQL queries across 10M+ records on MS SQL Server, cutting execution time and improving analytics throughput.</li>
+            </ul>
+            <div class="tags">
+              <span class="tag tag-lang">Python</span>
+              <span class="tag tag-tool">RPA</span>
+              <span class="tag tag-lang">SQL</span>
+              <span class="tag tag-tool">MS SQL Server</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="content-section">
+      <div class="section-inner">
+        <p class="section-label">Projects</p>
+        <h2 class="section-title">Things I've built</h2>
+        <div class="project-grid">
+
+          <div class="project-card project-card--featured reveal">
+            <div class="project-card-top">
+              <h3 class="project-name">VocalAI</h3>
+              <p class="project-meta">Jun 2025 &nbsp;&middot;&nbsp; Berkeley Hackathon 2025</p>
+            </div>
+            <ul class="exp-bullets">
+              <li>Trained a Vapi voice agent during a 48-hour hackathon, enabling a production-ready AI singing tutor.</li>
+              <li>Built the first AI-powered singing voice coaching system &mdash; impressed 14 judges and won 1st Place.</li>
+            </ul>
+            <div class="tags">
+              <span class="tag tag-lang">TypeScript</span>
+              <span class="tag tag-lang">Python</span>
+              <span class="tag tag-ai">Vapi</span>
+              <span class="tag tag-award">1st Place &middot; Vapi-Sponsored</span>
+            </div>
+          </div>
+
+          <div class="project-card reveal">
+            <div class="project-card-top">
+              <h3 class="project-name">Evee</h3>
+              <p class="project-meta">Dec 2024 &ndash; Present</p>
+            </div>
+            <ul class="exp-bullets">
+              <li>Built a Python voice assistant using whisper.cpp and Mistral 3B Instruct, automating daily Windows tasks through voice commands.</li>
+              <li>Added Chrome automation with Selenium and PyAutoGUI, expanding automatable workflows.</li>
+            </ul>
+            <div class="tags">
+              <span class="tag tag-lang">Python</span>
+              <span class="tag tag-ai">whisper.cpp</span>
+              <span class="tag tag-ai">Mistral 3B</span>
+              <span class="tag tag-framework">Selenium</span>
+            </div>
+          </div>
+
+          <div class="project-card reveal">
+            <div class="project-card-top">
+              <h3 class="project-name">Tigercat</h3>
+              <p class="project-meta">Jun 2025 &ndash; Present</p>
+            </div>
+            <ul class="exp-bullets">
+              <li>Developed a Chrome Extension AI agent using JavaScript and the Canvas LMS API, automating course file navigation.</li>
+              <li>Added logic to analyze and read course data, enabling in-browser tutoring and contextual assistance.</li>
+            </ul>
+            <div class="tags">
+              <span class="tag tag-lang">JavaScript</span>
+              <span class="tag tag-framework">Chrome Extension</span>
+              <span class="tag tag-framework">Canvas LMS API</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="content-section section-surface">
+      <div class="section-inner">
+        <p class="section-label">Skills</p>
+        <h2 class="section-title">What I work with</h2>
+        <div class="skills-grid">
+          <div class="skill-group reveal">
+            <p class="skill-group-label">Languages</p>
+            <div class="tags">
+              <span class="tag tag-lang">Python</span>
+              <span class="tag tag-lang">TypeScript</span>
+              <span class="tag tag-lang">JavaScript</span>
+              <span class="tag tag-lang">SQL</span>
+            </div>
+          </div>
+          <div class="skill-group reveal">
+            <p class="skill-group-label">Frameworks &amp; Libraries</p>
+            <div class="tags">
+              <span class="tag tag-framework">Next.js</span>
+              <span class="tag tag-framework">React</span>
+              <span class="tag tag-framework">Node.js</span>
+              <span class="tag tag-framework">LangChain</span>
+            </div>
+          </div>
+          <div class="skill-group reveal">
+            <p class="skill-group-label">AI &amp; ML</p>
+            <div class="tags">
+              <span class="tag tag-ai">OpenAI API</span>
+              <span class="tag tag-ai">RAG &middot; Pinecone</span>
+              <span class="tag tag-ai">whisper.cpp</span>
+              <span class="tag tag-ai">Vapi</span>
+              <span class="tag tag-ai">Ollama</span>
+            </div>
+          </div>
+          <div class="skill-group reveal">
+            <p class="skill-group-label">Infrastructure &amp; Tools</p>
+            <div class="tags">
+              <span class="tag tag-tool">Supabase</span>
+              <span class="tag tag-tool">Redis</span>
+              <span class="tag tag-tool">MS SQL Server</span>
+              <span class="tag tag-tool">Git</span>
+            </div>
+          </div>
+        </div>
+        <div class="awards-block reveal">
+          <p class="awards-label">Awards &amp; Recognition</p>
+          <p>Co-developer, Google Developers Student Club. 1st Place CalHacks 2025 (Vapi-sponsored, VocalAI). Represented University of the Pacific at CalHacks 2024.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-name">Bekzhan Abdimanapov</p>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/bexs" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/theonlybex" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:itsbebox@gmail.com">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- AI Chat Widget -->
+  <div id="chat-widget">
+    <button id="chat-toggle" aria-label="Chat with Bex">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+      </svg>
+      <span class="chat-label">Chat with Bex</span>
+    </button>
+    <div id="chat-panel" role="dialog" aria-label="Chat with Bex">
+      <div class="chat-header">
+        <div class="chat-header-info">
+          <div class="chat-avatar">B</div>
+          <div>
+            <p class="chat-name">Bex</p>
+            <p class="chat-status"><span class="status-dot"></span>Online now</p>
+          </div>
+        </div>
+        <button id="chat-close" aria-label="Close chat">&times;</button>
+      </div>
+      <div id="chat-messages" class="chat-messages"></div>
+      <div class="chat-input-row">
+        <input id="chat-input" type="text" placeholder="Ask me anything..." autocomplete="off" maxlength="500">
+        <button id="chat-send" aria-label="Send">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+</body>
 </html>
