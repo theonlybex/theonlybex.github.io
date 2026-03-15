@@ -30,7 +30,7 @@
         <a href="https://www.linkedin.com/in/bexs" target="_blank" rel="noopener">LinkedIn</a>
         <a href="https://github.com/theonlybex" target="_blank" rel="noopener">GitHub</a>
         <a href="mailto:itsbebox@gmail.com">Email</a>
-        <a href="#" class="nav-resume">Resume</a>
+        <a href="#" id="resume-link" class="nav-resume">Resume</a>
       </div>
     </div>
   </nav>
@@ -46,7 +46,7 @@
         </div>
         <p class="hero-location">San Francisco, CA</p>
         <h1 class="hero-name">Bekzhan<br>Abdimanapov</h1>
-        <p class="hero-role">Backend Engineer &nbsp;&middot;&nbsp; AI/ML Practitioner</p>
+        <p class="hero-role">Applied AI Engineer &nbsp;&middot;&nbsp; AI Software Engineer</p>
         <p class="hero-edu">MS Computer Science (AI/ML) &nbsp;&middot;&nbsp; University of the Pacific</p>
         <div class="hero-ctas">
           <a href="#projects" class="btn btn-primary">View Work</a>
@@ -60,7 +60,7 @@
       <div class="section-inner">
         <p class="section-label">About</p>
         <h2 class="section-title">Who I am</h2>
-        <p class="about-body">I'm a backend-focused software engineer and AI/ML practitioner. I build production systems with <strong>Python</strong>, <strong>TypeScript</strong>, and modern AI tooling. I care about clean APIs, great UX, and shipping things that actually work.</p>
+        <p class="about-body">I'm an Applied AI Engineer and AI Software Engineer. I build production systems with <strong>Python</strong>, <strong>TypeScript</strong>, and modern AI tooling. I care about clean APIs, great UX, and shipping things that actually work.</p>
         <blockquote class="quote reveal">
           <p>You fear the sword, so the sword I will bring against you, declares the Sovereign Lord.</p>
           <cite>Ezekiel 11:8</cite>
@@ -268,6 +268,152 @@
       </div>
     </div>
   </footer>
+
+  <!-- Resume Modal -->
+  <div id="resume-modal" role="dialog" aria-modal="true" aria-label="Resume">
+    <div class="resume-sheet">
+      <button id="resume-close" aria-label="Close resume">&times;</button>
+      <button id="resume-print" class="resume-print-btn">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/>
+        </svg>
+        Download PDF
+      </button>
+
+      <div class="resume-body" id="resume-printable">
+        <header class="res-header">
+          <h1 class="res-name">Bekzhan Abdimanapov</h1>
+          <p class="res-title">Applied AI Engineer &nbsp;&middot;&nbsp; AI Software Engineer</p>
+          <div class="res-contact">
+            <a href="mailto:itsbebox@gmail.com">itsbebox@gmail.com</a>
+            <span class="res-dot">&middot;</span>
+            <a href="https://www.linkedin.com/in/bexs" target="_blank" rel="noopener">linkedin.com/in/bexs</a>
+            <span class="res-dot">&middot;</span>
+            <a href="https://github.com/theonlybex" target="_blank" rel="noopener">github.com/theonlybex</a>
+            <span class="res-dot">&middot;</span>
+            <span>San Francisco, CA</span>
+          </div>
+        </header>
+
+        <section class="res-section">
+          <h2 class="res-section-title">Experience</h2>
+
+          <div class="res-entry">
+            <div class="res-entry-header">
+              <div>
+                <p class="res-role">Applied AI Engineer</p>
+                <p class="res-company">Wondish &nbsp;&middot;&nbsp; San Francisco, CA</p>
+              </div>
+              <p class="res-date">Feb 2026 &ndash; Present</p>
+            </div>
+            <ul class="res-bullets">
+              <li>Fine-tuned an Ollama LLM on proprietary recipe data to deliver personalized dish recommendations, improving user engagement and customization accuracy.</li>
+              <li>Integrated and deployed the fine-tuned model into a production web application, enabling real-time inference and scalable user personalization.</li>
+            </ul>
+          </div>
+
+          <div class="res-entry">
+            <div class="res-entry-header">
+              <div>
+                <p class="res-role">AI Software Engineer</p>
+                <p class="res-company">Leechy LLC &nbsp;&middot;&nbsp; San Jose, CA</p>
+              </div>
+              <p class="res-date">Aug 2025 &ndash; Jan 2026</p>
+            </div>
+            <ul class="res-bullets">
+              <li>Rebuilt company website with TypeScript, Next.js, and Supabase, improving usability and backend integration.</li>
+              <li>Developed an AI support assistant using OpenAI API, LangChain (RAG with Pinecone), and Redis &mdash; adding autofill and contextual navigation.</li>
+            </ul>
+          </div>
+
+          <div class="res-entry">
+            <div class="res-entry-header">
+              <div>
+                <p class="res-role">Software Engineer</p>
+                <p class="res-company">Halyk Bank &nbsp;&middot;&nbsp; Almaty, Kazakhstan</p>
+              </div>
+              <p class="res-date">Oct 2023 &ndash; Jan 2024</p>
+            </div>
+            <ul class="res-bullets">
+              <li>Designed and deployed production-level Python RPA bots to automate core banking workflows, reducing manual workload by 2+ hours daily.</li>
+              <li>Optimized SQL queries across 10M+ records on MS SQL Server, cutting execution time and improving analytics throughput.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="res-section">
+          <h2 class="res-section-title">Education</h2>
+          <div class="res-entry">
+            <div class="res-entry-header">
+              <div>
+                <p class="res-role">MS Computer Science &mdash; AI/ML Concentration</p>
+                <p class="res-company">University of the Pacific &nbsp;&middot;&nbsp; San Francisco, CA</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="res-section">
+          <h2 class="res-section-title">Projects</h2>
+
+          <div class="res-entry">
+            <div class="res-entry-header">
+              <div>
+                <p class="res-role">VocalAI &nbsp;<span class="res-award">&#127942; 1st Place &mdash; CalHacks 2025 (Vapi-Sponsored)</span></p>
+              </div>
+              <p class="res-date">Jun 2025</p>
+            </div>
+            <ul class="res-bullets">
+              <li>Built the first AI-powered singing voice coaching system in a 48-hour hackathon using Vapi, TypeScript, and Python.</li>
+              <li>Impressed 14 judges and won 1st Place in the Vapi-sponsored track at Berkeley CalHacks 2025.</li>
+            </ul>
+          </div>
+
+          <div class="res-entry">
+            <div class="res-entry-header">
+              <div><p class="res-role">Evee &mdash; Voice Assistant</p></div>
+              <p class="res-date">Dec 2024 &ndash; Present</p>
+            </div>
+            <ul class="res-bullets">
+              <li>Built a Python voice assistant using whisper.cpp and Mistral 3B Instruct, automating daily Windows tasks through voice commands.</li>
+            </ul>
+          </div>
+
+          <div class="res-entry">
+            <div class="res-entry-header">
+              <div><p class="res-role">Tigercat &mdash; Chrome Extension AI Agent</p></div>
+              <p class="res-date">Jun 2025 &ndash; Present</p>
+            </div>
+            <ul class="res-bullets">
+              <li>Developed a Chrome Extension AI agent using JavaScript and the Canvas LMS API, enabling in-browser tutoring and contextual assistance.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="res-section">
+          <h2 class="res-section-title">Skills</h2>
+          <div class="res-skills-grid">
+            <div>
+              <p class="res-skills-label">Languages</p>
+              <p class="res-skills-list">Python, TypeScript, JavaScript, SQL</p>
+            </div>
+            <div>
+              <p class="res-skills-label">Frameworks</p>
+              <p class="res-skills-list">Next.js, React, Node.js, LangChain, Selenium</p>
+            </div>
+            <div>
+              <p class="res-skills-label">AI &amp; ML</p>
+              <p class="res-skills-list">OpenAI API, RAG &middot; Pinecone, whisper.cpp, Vapi, Ollama, LLM Fine-tuning</p>
+            </div>
+            <div>
+              <p class="res-skills-label">Infrastructure</p>
+              <p class="res-skills-list">Supabase, Redis, MS SQL Server, Git, RPA</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
 
   <!-- AI Chat Widget -->
   <div id="chat-widget">

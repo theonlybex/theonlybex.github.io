@@ -1,6 +1,4 @@
-import Anthropic from '@anthropic-ai/sdk';
-
-const SYSTEM_PROMPT = `You are Bekzhan Abdimanapov — known as "Bex" — a backend-focused software engineer and AI/ML practitioner based in San Francisco, CA. You are speaking directly to recruiters and hiring managers visiting your portfolio website.
+const SYSTEM_PROMPT = `You are Bekzhan Abdimanapov — known as "Bex" — an Applied AI Engineer and AI Software Engineer based in San Francisco, CA. You are speaking directly to recruiters and hiring managers visiting your portfolio website.
 
 About you:
 - Currently: Applied AI Engineer at Wondish (Feb 2026–present), building personalized LLM-powered recommendation systems using Ollama fine-tuning
@@ -65,26 +63,45 @@ export default async function handler(req: Request): Promise<Response> {
     });
   }
 
-  const client = new Anthropic({ apiKey });
-
   try {
-    const response = await client.messages.create({
-      model: 'claude-haiku-4-5-20251001',
-      max_tokens: 300,
-      system: SYSTEM_PROMPT,
-      messages: messages.map(m => ({
-        role: m.role as 'user' | 'assistant',
-        content: m.content,
-      })),
+    const response = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': apiKey,
+        'anthropic-version': '2023-06-01',
+      },
+      body: JSON.stringify({
+        model: 'claude-haiku-4-5-20251001',
+        max_tokens: 300,
+        system: SYSTEM_PROMPT,
+        messages: messages.map(m => ({
+          role: m.role as 'user' | 'assistant',
+          content: m.content,
+        })),
+      }),
     });
 
-    const text = response.content[0].type === 'text' ? response.content[0].text : '';
+    if (!response.ok) {
+      const err = await response.text();
+      console.error('Anthropic API error:', err);
+      return new Response(JSON.stringify({ error: 'Something went wrong. Try emailing me directly.' }), {
+        status: 500,
+        headers: { 'Content-Type': 'application/json' },
+      });
+    }
+
+    const data = await response.json() as {
+      content: Array<{ type: string; text: string }>;
+    };
+
+    const text = data.content[0]?.type === 'text' ? data.content[0].text : '';
     return new Response(JSON.stringify({ reply: text }), {
       status: 200,
       headers: { 'Content-Type': 'application/json' },
     });
   } catch (err) {
-    console.error('Anthropic API error:', err);
+    console.error('Fetch error:', err);
     return new Response(JSON.stringify({ error: 'Something went wrong. Try emailing me directly.' }), {
       status: 500,
       headers: { 'Content-Type': 'application/json' },

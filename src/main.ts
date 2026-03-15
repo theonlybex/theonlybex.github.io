@@ -5,6 +5,7 @@ import { initCursor } from './cursor.js';
 import { initTheme }  from './theme.js';
 import { initGitHub } from './github.js';
 import { initChat }   from './chat.js';
+import { initResume } from './resume.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   initNav();
@@ -13,5 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initCursor();
   initTheme();
   initChat();
+  initResume();
   void initGitHub();
 });
